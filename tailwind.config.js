@@ -2,16 +2,15 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   // mode: "jit",
-  // content: {
-  //   files: [
-  //     "./components/**/*.{vue,js}",
-  //     "./layouts/**/*.vue",
-  //     "./pages/**/*.vue",
-  //     "./plugins/**/*.{js,ts}",
-  //     "./nuxt.config.{js,ts}",
-  //   ],
-  // },
-  // darkMode: false,
+  content: {
+    files: [
+      "./components/**/*.{vue,js}",
+      "./layouts/**/*.vue",
+      "./pages/**/*.vue",
+      "./plugins/**/*.{js,ts}",
+      "./nuxt.config.{js,ts}",
+    ],
+  },
   theme: {
     fontFamily: {
       display: ['Readex Pro', 'sans-serif'],

@@ -34,7 +34,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxt/image'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -55,5 +56,26 @@ export default {
     families: {
       'Readex+Pro': true
     }
+  },
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536,
+    },
+    presets: {
+      preview: {
+        modifiers: {
+          fit: 'cover',
+          format: 'jpg',
+          width: 400,
+          height: 300,
+        },
+      },
+    },
   }
 }

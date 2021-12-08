@@ -18,15 +18,9 @@
           </div>
           <div class="hidden sm:ml-12 sm:flex sm:space-x-8">
             <!-- Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-            <nuxt-link to="/" class="border-blue-400 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Home
-            </nuxt-link>
-            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Docs
-            </a>
-            <nuxt-link to="/blog" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-              Blog
-            </nuxt-link>
+            <component :is="link.type" v-for="link in links" :key="link.path" :to="link.path" :href="link.path" :class="{ 'border-blue-400 border-b-2': isRouteActive(link.path) }" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">
+              {{ link.title }}
+            </component>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -50,6 +44,29 @@
 
 
 export default {
-
+  data: () => ({
+    links: [
+      {
+        title: 'Home',
+        path: '/',
+        type: 'nuxt-link'
+      },
+      {
+        title: 'Docs',
+        path: 'https://github.com',
+        type: 'a'
+      },
+      {
+        title: 'Blog',
+        path: '/blog',
+        type: 'nuxt-link'
+      }
+    ]
+  }),
+  methods: {
+    isRouteActive(link) {
+      return this.$route.path === link
+    },
+  }
 }
 </script>

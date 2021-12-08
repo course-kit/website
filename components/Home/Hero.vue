@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:grid lg:grid-cols-12 lg:gap-8 px-6 sm:px-8">
-    <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left prose prose-lg">
+  <div class="flex gap-12 justify-center">
+    <div class="max-w-xl prose prose-lg">
       <h1 class="">
         Embed a private video course on any website.
       </h1>

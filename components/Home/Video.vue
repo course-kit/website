@@ -6,12 +6,9 @@
           <div class="relative">
             <div class="sm:text-center prose prose-lg mx-auto">
               <h2 class="">How it works</h2>
-              <p class="">CourseKit is currently an invite-only beta. If you'd like to be a beta tester or get notified when we launch, enter your email below.</p>
             </div>
             <div class="mt-8">
-              <iframe src='https://player.vimeo.com/video/648415959' width='640' height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen>
-
-              </iframe>
+              <iframe src='https://player.vimeo.com/video/648415959' width='820' height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
             </div>
           </div>
         </div>

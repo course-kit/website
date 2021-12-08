@@ -26,13 +26,7 @@ module.exports = {
             },
             h2: {
               fontFamily: `${theme('fontFamily.display')}`
-            },
-            a: {
-              color: theme('colors.green.500'),
-              '&:hover': {
-                color: theme('colors.green.600')
-              },
-            },
+            }
           },
         },
       })

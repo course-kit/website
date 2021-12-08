@@ -1,6 +1,6 @@
 <template>
   <div class="prose">
-    <nuxt-link v-for="post in posts" :key="post.id" :to="`/blog${post.path}`">
+    <nuxt-link v-for="post in posts" :key="post.id" :to="`/blog/${post.slug}`">
       <h2>{{ post.title }}</h2>
       <p>{{ post.description }}</p>
       <nuxt-img

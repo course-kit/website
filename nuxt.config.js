@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'coursekit-website',
+    title: 'CourseKit',
     htmlAttrs: {
       lang: 'en'
     },
@@ -15,7 +15,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/icon.png' }
     ]
   },
 
@@ -42,7 +42,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/recaptcha',
   ],
+
+  recaptcha: {
+    hideBadge: false,
+    version: 2,
+    siteKey: process.env.RECAPTCHA_SITE_KEY
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
@@ -57,25 +64,4 @@ export default {
       'Readex+Pro': true
     }
   },
-  image: {
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536,
-      '2xl': 1536,
-    },
-    presets: {
-      preview: {
-        modifiers: {
-          fit: 'cover',
-          format: 'jpg',
-          width: 400,
-          height: 300,
-        },
-      },
-    },
-  }
 }

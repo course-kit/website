@@ -8,7 +8,7 @@
               <h2 class="">How it works</h2>
             </div>
             <div class="mt-8">
-              <iframe src='https://player.vimeo.com/video/648415959' width='820' height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
+              <iframe src='https://player.vimeo.com/video/653552684' width='820' height="360" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
             </div>
           </div>
         </div>

@@ -13,16 +13,16 @@
   </div>
 </template>
 <script>
-import Card from "../../components/Blog/Card";
+import Card from '../../components/Blog/Card'
 export default {
-  components: {Card},
+  components: { Card },
   async asyncData({ $content }) {
     const posts = await $content()
       .only(['title', 'image', 'tags', 'slug', 'description'])
       .sortBy('createdAt', 'desc')
       .fetch()
     return {
-      posts
+      posts,
     }
   },
 }

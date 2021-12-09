@@ -1,9 +1,11 @@
 <template>
-  <div class="mb-24 py-16 container mx-auto max-w-5xl bg-white px-6 sm:px-8 lg:px-12">
+  <div
+    class="mb-24 py-16 container mx-auto max-w-5xl bg-white px-6 sm:px-8 lg:px-12"
+  >
     <article class="prose max-w-none">
       <h1>{{ page.title }}</h1>
       <p class="font-bold">by Anthony Gore, 15th Dec 2021</p>
-      <hr>
+      <hr />
       <h3>Table of contents</h3>
       <nav class="pb-4">
         <ul class="space-y-2">
@@ -20,11 +22,11 @@
 </template>
 <script>
 export default {
-  async asyncData ({ $content, params }) {
+  async asyncData({ $content, params }) {
     const page = await $content(params.slug).fetch()
     return {
-      page
+      page,
     }
-  }
+  },
 }
 </script>

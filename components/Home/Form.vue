@@ -1,10 +1,9 @@
 <template>
-  <div class="relative">
-    <div class="px-4 sm:px-6 lg:px-8">
+  <div class="container mx-auto px-6 sm:px-8 lg:px-12 relative">
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
-        <div class="relative px-6 py-10 overflow-hidden sm:px-12 sm:py-20">
+        <div class="relative py-10 overflow-hidden sm:py-20">
           <div class="relative flex item-center flex-col">
-            <div class="sm:text-center prose prose-lg mx-auto">
+            <div class="text-center prose lg:prose-lg mx-auto">
               <h2 class="">Join as a beta tester</h2>
               <p class="">
                 CourseKit is currently an invite-only beta. If you'd like to be
@@ -46,7 +45,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 <script>

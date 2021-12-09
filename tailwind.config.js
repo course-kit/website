@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   // mode: "jit",
@@ -35,5 +36,17 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'),],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.max-w-video': {
+          'max-width': '760px',
+        }
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    })
+  ],
 }

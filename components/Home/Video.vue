@@ -4,14 +4,12 @@
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
         <div class="relative px-6 py-10 overflow-hidden sm:px-12 sm:py-20">
           <div class="relative">
-            <div class="sm:text-center prose prose-lg mx-auto">
+            <div class="text-center prose lg:prose-lg mx-auto">
               <h2 class="">How it works</h2>
             </div>
-            <div class="mt-8">
+            <div class="mt-8 aspect-w-16 aspect-h-9">
               <iframe
                 src="https://player.vimeo.com/video/653552684"
-                width="820"
-                height="360"
                 frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowFullScreen

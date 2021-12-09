@@ -77,14 +77,18 @@ export default {
     async submit() {
       try {
         if (this.emailIsValid(this.email)) {
-          const token = await this.$recaptcha.execute('subscribe')
+          const token = await this.$recaptcha.execute('login')
           const { data, status } = await fetch(
             'https://admin.vuejsdevelopers.com/api/coursekit/subscribe',
             {
               method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
               body: JSON.stringify({
                 email: this.email,
-                token,
+                'g-recaptcha-response': token,
               }),
             }
           )

@@ -34,7 +34,7 @@
               :key="link.path"
               :to="link.path"
               :href="link.path"
-              :target="target"
+              :target="link.target"
               :class="{
                 'border-blue-400 border-b-2': isRouteActive(link.path),
               }"

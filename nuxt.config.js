@@ -42,13 +42,19 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/recaptcha',
+    [
+      '@nuxtjs/recaptcha',
+      {
+        hideBadge: false,
+        version: 3
+      }
+    ],
   ],
 
   publicRuntimeConfig: {
     recaptcha: {
       hideBadge: false,
-      version: 2,
+      version: 3,
       siteKey: process.env.RECAPTCHA_SITE_KEY
     },
   },

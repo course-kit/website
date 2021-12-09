@@ -45,10 +45,12 @@ export default {
     '@nuxtjs/recaptcha',
   ],
 
-  recaptcha: {
-    hideBadge: false,
-    version: 2,
-    siteKey: process.env.RECAPTCHA_SITE_KEY
+  publicRuntimeConfig: {
+    recaptcha: {
+      hideBadge: false,
+      version: 2,
+      siteKey: process.env.RECAPTCHA_SITE_KEY
+    },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

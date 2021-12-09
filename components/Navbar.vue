@@ -34,7 +34,7 @@
               :key="link.path"
               :to="link.path"
               :href="link.path"
-              target="_blank"
+              :target="target"
               :class="{
                 'border-blue-400 border-b-2': isRouteActive(link.path),
               }"
@@ -69,16 +69,19 @@ export default {
         title: 'Home',
         path: '/',
         type: 'nuxt-link',
+        target: ''
       },
       {
         title: 'Docs',
         path: 'https://github.com/course-kit/client',
         type: 'a',
+        target: '_blank'
       },
       {
         title: 'Blog',
         path: '/blog',
         type: 'nuxt-link',
+        target: ''
       },
     ],
   }),

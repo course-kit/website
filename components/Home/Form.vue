@@ -30,25 +30,60 @@
 export default {
   data: () => ({
     email: null,
-    message: null
+    message: null,
+    token: null,
+    recaptchaLoaded: false
   }),
   methods: {
+    emailIsValid () {
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(this.email);
+    },
     async loadRecaptcha () {
-      try {
-        await this.$recaptcha.init()
-        console.log('recaptcha loaded')
-      } catch (e) {
-        console.error(e);
+      if (!this.recaptchaLoaded) {
+        try {
+          await this.$recaptcha.init()
+          this.recaptchaLoaded = true
+          console.log('recaptcha loaded')
+        } catch (e) {
+          console.error(e);
+        }
       }
     },
     async submit () {
       try {
-        const token = await this.$recaptcha.execute('login')
-        this.message = {
-          text: 'Submission successful!',
-          classes: 'bg-green-200 text-green-900'
+        if (this.emailIsValid(this.email)) {
+          const token = await this.$recaptcha.execute('subscribe')
+          const { data, status } = await fetch('https://admin.vuejsdevelopers.com/api/coursekit/subscribe', {
+            method: 'POST',
+            body: JSON.stringify({
+              email: this.email,
+              token
+            })
+          })
+          if (status === 200) {
+            this.message = {
+              text: 'Submission successful!',
+              classes: 'bg-green-200 text-green-900'
+            }
+          } else {
+            this.message = {
+              text: 'Submission error!',
+              classes: 'bg-red-200 text-red-900'
+            }
+            console.log(data)
+          }
+        } else {
+          this.message = {
+            text: 'Email invalid!',
+            classes: 'bg-red-200 text-red-900'
+          }
         }
       } catch (error) {
+        this.message = {
+          text: 'Submission error!',
+          classes: 'bg-red-200 text-red-900'
+        }
         console.log('Login error:', error)
       }
     },

@@ -3,14 +3,12 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   // mode: "jit",
-  content: {
-    files: [
+  purge: {
+    content: [
       "./components/**/*.{vue,js}",
       "./layouts/**/*.vue",
       "./pages/**/*.vue",
-      "./plugins/**/*.{js,ts}",
-      "./nuxt.config.{js,ts}",
-    ],
+    ]
   },
   theme: {
     fontFamily: {
@@ -27,15 +25,19 @@ module.exports = {
             },
             h2: {
               fontFamily: `${theme('fontFamily.display')}`
+            },
+            h3: {
+              fontFamily: `${theme('fontFamily.display')}`
+            },
+            h4: {
+              fontFamily: `${theme('fontFamily.display')}`
             }
           },
         },
       })
     }
   },
-  variants: {
-    extend: {},
-  },
+  variants: ['important'],
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
@@ -48,5 +50,5 @@ module.exports = {
       }
       addUtilities(newUtilities, ['responsive', 'hover'])
     })
-  ],
+  ]
 }

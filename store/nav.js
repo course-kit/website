@@ -1,5 +1,5 @@
 export const state = () => ({
-  open: false
+  open: false,
 })
 
 export const mutations = {
@@ -11,5 +11,5 @@ export const mutations = {
   },
   toggle(state) {
     state.open = !state.open
-  }
+  },
 }

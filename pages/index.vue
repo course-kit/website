@@ -1,7 +1,9 @@
 <template>
   <div>
     <Hero />
-    <Video />
+    <Features />
+    <Benefits />
+    <Demo />
     <Form />
   </div>
 </template>
@@ -9,7 +11,10 @@
 import Hero from '../components/Home/Hero'
 import Form from '../components/Home/Form'
 import Video from '../components/Home/Video'
+import Features from '../components/Home/Features'
+import Benefits from '../components/Home/Benefits'
+import Demo from '../components/Home/Demo'
 export default {
-  components: { Video, Form, Hero },
+  components: { Demo, Benefits, Features, Video, Form, Hero },
 }
 </script>

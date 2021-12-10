@@ -19,7 +19,7 @@ const title = 'CourseKit | Headless Online Video Course Platform for Developers'
 const description =
   'The easiest way to create a fully-custom online video course. Secure video + course admin feature with just a few lines of JavaScript!'
 const url = 'https://coursekit.dev/'
-const image = '/coursekit_meta.jpg'
+const image = `${url}coursekit_meta.jpg`
 
 export default {
   components: { Demo, Benefits, Features, Video, Form, Hero },

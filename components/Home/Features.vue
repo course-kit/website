@@ -6,22 +6,22 @@
           <div class="text-center prose lg:prose-lg mx-auto">
             <h2>How it works</h2>
           </div>
-          <div
-            class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-12"
-          >
+          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-12">
             <div
               class="overflow-hidden shadow-md bg-white"
               v-for="(feature, index) in features"
               :key="index"
             >
               <div class="bg-yellow-200 p-8 h-50">
-                <div
-                  class="flex justify-center flex-col items-center"
-                >
-                  <span class="bg-white rounded-full w-8 h-8 pl-3 pt-1 text-bold font-display">
+                <div class="flex justify-center flex-col items-center">
+                  <span
+                    class="bg-white rounded-full w-8 h-8 pl-3 pt-1 text-bold font-display"
+                  >
                     {{ index + 1 }}
                   </span>
-                  <h4 class="relative text-gray-800 p-2 m-2 text-bold font-display text-lg">
+                  <h4
+                    class="relative text-gray-800 p-2 m-2 text-bold font-display text-lg"
+                  >
                     {{ feature.title }}
                   </h4>
                   <component
@@ -56,7 +56,7 @@ export default {
     CodeIcon,
     CloudUploadIcon,
     DesktopComputerIcon,
-    CurrencyDollarIcon
+    CurrencyDollarIcon,
   },
   data: () => ({
     features: [
@@ -80,9 +80,10 @@ export default {
       },
       {
         title: 'Add a payment gateway',
-        description: 'Enrol students with a webhook from Stripe, Gumroad, etc. Your course is now ready to go live!',
-        icon: CurrencyDollarIcon
-      }
+        description:
+          'Enrol students with a webhook from Stripe, Gumroad, etc. Your course is now ready to go live!',
+        icon: CurrencyDollarIcon,
+      },
     ],
   }),
 }

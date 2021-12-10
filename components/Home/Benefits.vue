@@ -34,12 +34,12 @@ export default {
       {
         title: 'Fully customizable UI and UX',
         description:
-          'Our headless platform allows you to make your course look and feel exactly how you want.'
+          'Our headless platform allows you to make your course look and feel exactly how you want.',
       },
       {
         title: 'Secure videos',
         description:
-          'Token-based auth ensures users must be enrolled before they can see your content.'
+          'Token-based auth ensures users must be enrolled before they can see your content.',
       },
       {
         title: 'Integrate with anything',

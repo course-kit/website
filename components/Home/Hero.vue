@@ -4,7 +4,7 @@
       <div class="max-w-xl prose lg:prose-lg text-center md:text-left">
         <h1 class="">A headless video course platform for developers.</h1>
         <p class="">
-          The easiest way to create a fully-custom online video course. Secure video + all the features you need with just a few lines of JavaScript.
+          The easiest way to create a fully-custom online video course. Secure video + course admin feature with just a few lines of JavaScript.
         </p>
       </div>
       <div

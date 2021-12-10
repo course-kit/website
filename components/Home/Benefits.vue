@@ -39,12 +39,12 @@ export default {
       {
         title: 'Secure videos',
         description:
-          'Our token-based auth system ensures users must be enrolled before they can watch your content.'
+          'Token-based auth ensures users must be enrolled before they can see your content.'
       },
       {
-        title: 'Easy to add to any site',
+        title: 'Integrate with anything',
         description:
-          'With just a few lines of JavaScript you can add our video player and course controls to any website including Jamstack sites and static sites.',
+          'CourseKit plays nicely with all JS frameworks and payment gateways.',
       },
     ],
   }),

@@ -10,7 +10,7 @@
             class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12"
           >
             <div
-              class="overflow-hidden"
+              class="overflow-hidden shadow-md"
               v-for="(feature, index) in features"
               :key="index"
             >
@@ -47,35 +47,35 @@
 import {
   CodeIcon,
   CloudUploadIcon,
-  CurrencyDollarIcon,
+  DesktopComputerIcon,
 } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     CodeIcon,
     CloudUploadIcon,
-    CurrencyDollarIcon,
+    DesktopComputerIcon,
   },
   data: () => ({
     features: [
       {
-        title: 'Embed widgets',
+        title: 'Create your site',
         description:
-          'Add our video player and course admin widgets with a few lines of JavaScript. Customize the look and feel with CSS and your imagination.',
+          'Use your favorite frontend tools to build a site for your course. CourseKit is static-site friendly - no need for a server.',
+        icon: DesktopComputerIcon,
+      },
+      {
+        title: 'Embed CourseKit widgets',
+        description:
+          'Add our fully-customizable video player and course admin widgets with a few lines of JavaScript.',
         icon: CodeIcon,
       },
       {
         title: 'Upload videos',
         description:
-          'Use our drag and drop cloud interface to upload videos and arrange into one or more courses.',
+          'Use our drag and drop cloud interface to upload your videos. Your course is now ready to go!',
         icon: CloudUploadIcon,
-      },
-      {
-        title: 'Connect payment gateway',
-        description:
-          'Use a webhook to enrol students when they purchase through Stripe, Gumroad, or any other gateway.',
-        icon: CurrencyDollarIcon,
-      },
+      }
     ],
   }),
 }

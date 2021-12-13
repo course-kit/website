@@ -1,6 +1,6 @@
 <template>
-  <div class="pb-24 container mx-auto max-w-5xl">
-    <div class="mt-6 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
+  <div class="pb-24 container mx-auto max-w-6xl px-6 sm:px-8 lg:px-12 py-12 lg:py-16">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
       <Card
         v-for="post in posts"
         :key="post.id"
@@ -8,6 +8,7 @@
         :path="`/blog/${post.slug}`"
         :title="post.title"
         :description="post.description"
+        :date="post.createdAt"
       ></Card>
     </div>
   </div>
@@ -18,7 +19,7 @@ export default {
   components: { Card },
   async asyncData({ $content }) {
     const posts = await $content()
-      .only(['title', 'image', 'tags', 'slug', 'description'])
+      .only(['title', 'image', 'tags', 'slug', 'description', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
     return {

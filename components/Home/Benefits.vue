@@ -32,6 +32,16 @@ export default {
   data: () => ({
     features: [
       {
+        title: 'Course admin tools out-of-the-box',
+        description:
+          'All the features of online course are supplied as widgets including video, login, watched video toggles, etc.',
+      },
+      {
+        title: 'No server required',
+        description:
+          'Skip the cost and hassle of setting up a backend. Our cloud API handles everything you need.',
+      },
+      {
         title: 'Fully customizable UI and UX',
         description:
           'Our headless platform allows you to make your course look and feel exactly how you want.',

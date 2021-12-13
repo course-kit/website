@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="pt-12 lg:pt-16">
     <Hero />
     <Features />
-    <Benefits />
     <Demo />
+    <Benefits />
     <Form />
   </div>
 </template>

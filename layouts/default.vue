@@ -1,7 +1,7 @@
 <template>
   <div class="relative bg-gray-100 overflow-hidden">
     <Navbar />
-    <main class="mt-12 mx-auto max-w-7xl lg:mt-16">
+    <main class="mx-auto max-w-7xl mt-16">
       <Nuxt />
     </main>
     <Footer />

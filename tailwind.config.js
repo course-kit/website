@@ -16,6 +16,9 @@ module.exports = {
       body: ['Readex Pro', 'sans-serif'],
     },
     extend: {
+      lineHeight: {
+        '12': '3rem',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

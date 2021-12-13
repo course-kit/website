@@ -1,11 +1,10 @@
 <template>
   <div class="container mx-auto px-6 sm:px-8 lg:px-12 mb-16">
     <div class="flex gap-12 justify-center items-center flex-col md:flex-row">
-      <div class="max-w-xl prose lg:prose-lg text-center md:text-left">
-        <h1 class="">A headless video course platform for developers.</h1>
-        <p class="">
-          The easiest way to create a fully-custom online video course. Secure
-          video + course admin feature with just a few lines of JavaScript.
+      <div class="max-w-xl text-center md:text-left">
+        <h1 class="text-4xl font-bold font-display mb-6 leading-12">Static Blog + CourseKit = Amazing Online Course Site</h1>
+        <p class="prose lg:prose-lg ">
+          The easiest way to create a full-featured, custom online course with your favorite frontend tools. No server required!
         </p>
       </div>
       <div

@@ -67,16 +67,16 @@ export default {
         icon: DesktopComputerIcon,
       },
       {
-        title: 'Upload videos',
-        description:
-          'Use our drag and drop cloud interface to upload your videos and arrange into courses.',
-        icon: CloudUploadIcon,
-      },
-      {
         title: 'Embed CourseKit widgets',
         description:
           'Add our fully-customizable video player and course admin widgets with a few lines of JavaScript.',
         icon: CodeIcon,
+      },
+      {
+        title: 'Upload videos',
+        description:
+          'Use our drag and drop cloud interface to upload your videos and arrange into courses.',
+        icon: CloudUploadIcon,
       },
       {
         title: 'Add a payment gateway',

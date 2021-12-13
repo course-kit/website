@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <nav class="bg-white shadow">
+  <nav class="bg-white border-b-2 fixed w-full z-10">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -95,14 +95,14 @@ export default {
         target: '',
       },
       {
-        title: 'Demo',
-        path: '#demo',
+        title: 'Blog',
+        path: '/blog',
         type: 'nuxt-link',
         target: '',
       },
       {
         title: 'Join Beta',
-        path: '#join',
+        path: '/#join',
         type: 'nuxt-link',
         target: '',
       },

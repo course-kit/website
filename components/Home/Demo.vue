@@ -1,29 +1,76 @@
 <template>
-  <div class="relative bg-gray-50 bg-white" id="demo">
-    <div class="px-4 sm:px-6 lg:px-8">
+  <div class="relative bg-gray-100 bg-white" id="demo">
+    <div class="px-4 sm:px-6 lg:px-8 py-12 sm:py-24 sm:px-12">
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
-        <div class="relative px-6 py-12 sm:py-24 overflow-hidden sm:px-12">
-          <div class="relative flex flex-col justify-center items-center gap-8">
-            <div class="text-center prose lg:prose-lg mx-auto">
-              <h2 class="">Try a demo</h2>
+        <div class="relative flex flex-col justify-center items-center gap-8">
+          <div class="text-center prose lg:prose-lg mx-auto">
+            <h2 class="">Live example</h2>
+          </div>
+          <div>
+            <div class="flex flex-col-reverse lg:flex-row gap-6 justify-center">
+              <img :src="currentStep.image" alt="CourseKit Demo" class="w-full h-full lg:w-2/3 object-center object-cover shadow-md" />
+              <DemoSteps :steps="steps" @selected="onSelect" class="lg:w-64 flex-shrink-0 lg:mt-6" />
             </div>
-            <div class="max-w-xl">
-              <a
-                href="https://coursekit-nuxt-demo.netlify.app/lesson/1"
-                target="_blank"
-              >
-                <img src="/demo.png" alt="CourseKit Demo" class="shadow-md" />
-              </a>
-            </div>
-            <a
-              target="_blank"
-              href="https://coursekit-nuxt-demo.netlify.app/lesson/1"
-              class="px-4 py-2 rounded-md border-2 border-blue-500 text-blue-500 bg-transparent text-sm font-bold"
-              >Try Live Demo</a
-            >
+            <p class="prose max-w-none relative mt-6 text-center">
+              {{ currentStep.description }}
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+import DemoSteps from "./DemoSteps";
+const steps = [
+  {
+    name: 'Lesson page (logged out)',
+    description: 'Until a student enrols and logs in they will not be able see your content.',
+    image: '/demo.png',
+    current: true
+  },
+  {
+    name: 'Lesson page (logged in)',
+    description: 'Once logged in, a student can watch you video and mark complete',
+    image: '/demo.png'
+  },
+  {
+    name: 'Course page',
+    description: 'Stuff',
+    image: '/demo.png'
+  },
+  {
+    name: 'Cloud-based backend',
+    description: 'Stuff',
+    image: '/demo.png'
+  },
+]
+
+export default {
+  components: {DemoSteps},
+  data: () => ({
+    steps
+  }),
+  methods: {
+    onSelect(selected) {
+      this.steps = this.steps.map((step, index) => {
+        step.current = index === selected
+        return step
+      })
+    }
+  },
+  computed: {
+    currentStep () {
+      return this.steps.find(step => step.current)
+    }
+  }
+}
+</script>
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>

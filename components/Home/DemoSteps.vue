@@ -1,7 +1,7 @@
 <template>
   <nav class="flex items-center justify-center" aria-label="Progress">
     <ol role="list" class="ml-8 flex items-center space-x-5">
-      <li v-for="(step, i) in steps" :key="step.name" @click="$emit('selected', i)">
+      <li v-for="(step, i) in steps" :key="step.name" @click="$emit('selected', i)" class="cursor-pointer">
         <span v-if="step.current" class="relative flex items-center justify-center" aria-current="step">
           <span class="absolute w-5 h-5 p-px flex" aria-hidden="true">
             <span class="w-full h-full rounded-full bg-indigo-200" />

@@ -17,14 +17,14 @@
                 class="lg:w-64 flex-shrink-0 lg:mt-6"
               />
               <div class="lg:w-2/3 flex flex-row items-center gap-4 justify-center">
-                <ChevronLeftIcon class="text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="previousStep" />
+                <ChevronLeftIcon class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="previousStep" />
                 <img
                   :src="currentStep.image"
                   alt="CourseKit Demo"
                   class="object-center object-cover shadow-md cursor-pointer"
                   @click="nextStep"
                 />
-                <ChevronRightIcon class="text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="nextStep" />
+                <ChevronRightIcon class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="nextStep" />
               </div>
               <p class="prose italic text-gray-500">
                 {{ currentStep.description }}
@@ -44,13 +44,13 @@ const steps = [
     name: 'Course page (logged out)',
     description: 'We start at the course landing page (just static content).',
     image: '/course_logged_out.png',
+    current: true,
   },
   {
     name: 'Lesson page (logged out)',
     description:
       'A lesson page. The video is not viewable until a student enrols and logs in.',
-    image: '/lesson_logged_out.png',
-    current: true,
+    image: '/lesson_logged_out.png'
   },
   {
     name: 'Course page (logged in)',
@@ -62,6 +62,18 @@ const steps = [
     description:
       'Now that the student is authenticated they can watch a video and mark it complete.',
     image: '/lesson_logged_in.png',
+  },
+  {
+    name: 'Payment page',
+    description:
+      'We\'ve integrated with Gumroad to accept payments and use a webhook to enrol students.',
+    image: '/checkout_page.png'
+  },
+  {
+    name: 'Auth page',
+    description:
+      'After purchase, students create an account with CourseKit so they can access your content.',
+    image: '/auth_page.png'
   },
 ]
 

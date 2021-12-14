@@ -31,7 +31,7 @@ export default {
         content: description,
       },
       {
-        name: 'og:description',
+        property: 'og:description',
         content: description,
       },
       {
@@ -39,7 +39,7 @@ export default {
         content: description,
       },
       {
-        name: 'og:image',
+        property: 'og:image',
         content: image,
       },
       {
@@ -51,7 +51,7 @@ export default {
         content: title,
       },
       {
-        property: 'twitter:title',
+        name: 'twitter:title',
         content: title,
       },
       { property: 'og:site_name', content: 'CourseKit' },

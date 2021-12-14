@@ -10,7 +10,7 @@
             </p>
           </div>
           <div>
-            <div class="flex flex-col gap-6 justify-center items-center">
+            <div class="flex flex-col gap-6 items-center">
               <DemoSteps
                 :steps="steps"
                 @selected="onSelect"
@@ -26,9 +26,10 @@
                 />
                 <ChevronRightIcon class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="nextStep" />
               </div>
-              <p class="prose italic text-gray-500">
-                {{ currentStep.description }}
-              </p>
+              <div class="prose italic text-gray-500 text-center">
+                <span class="font-bold">{{ currentStep.name }}.</span>
+                <span>{{ currentStep.description }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -42,37 +43,37 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@vue-hero-icons/outline'
 const steps = [
   {
     name: 'Course page (logged out)',
-    description: 'We start at the course landing page (just static content).',
+    description: 'This is just static content showing info about a course.',
     image: '/course_logged_out.png',
     current: true,
   },
   {
     name: 'Lesson page (logged out)',
     description:
-      'A lesson page. The video is not viewable until a student enrols and logs in.',
+      'The lesson video is not viewable until a student enrols.',
     image: '/lesson_logged_out.png'
   },
   {
     name: 'Course page (logged in)',
-    description: 'Once logged in, a student can see watched lessons and resume where they left off.',
+    description: 'Watched lessons are marked and the student resume where they left off.',
     image: '/course_logged_in.png',
   },
   {
     name: 'Lesson page (logged in)',
     description:
-      'Now that the student is authenticated they can watch a video and mark it complete.',
+      'Once authenticated, the student can watch a video and mark it complete.',
     image: '/lesson_logged_in.png',
   },
   {
     name: 'Payment page',
     description:
-      'We\'ve integrated with Gumroad to accept payments and use a webhook to enrol students.',
+      'We\'ve integrated with Gumroad to accept payments and use their webhook feature to enrol students via the CourseKit API.',
     image: '/checkout_page.png'
   },
   {
     name: 'Auth page',
     description:
-      'After purchase, students create an account with CourseKit so they can access your content.',
+      'All auth is handled by CourseKit. After purchasing a course, students create an account so they can access your content.',
     image: '/auth_page.png'
   },
 ]

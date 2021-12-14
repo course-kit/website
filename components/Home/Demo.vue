@@ -4,7 +4,7 @@
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
         <div class="relative flex flex-col justify-center items-center gap-8">
           <div class="text-center prose lg:prose-lg mx-auto">
-            <h2 class="">Live example</h2>
+            <h2 class="">Example CourseKit site</h2>
           </div>
           <div>
             <div class="flex flex-col-reverse lg:flex-row gap-6 justify-center">
@@ -35,24 +35,24 @@ const steps = [
     name: 'Lesson page (logged out)',
     description:
       'Until a student enrols and logs in they will not be able see your content.',
-    image: '/demo.png',
+    image: '/lesson_logged_out.png',
     current: true,
+  },
+  {
+    name: 'Course page (logged out)',
+    description: 'The course page shows lesson info',
+    image: '/course_logged_out.png',
+  },
+  {
+    name: 'Course page (logged in)',
+    description: 'Once logged in, the UI is aware of watched lessons',
+    image: '/course_logged_in.png',
   },
   {
     name: 'Lesson page (logged in)',
     description:
       'Once logged in, a student can watch you video and mark complete',
-    image: '/demo.png',
-  },
-  {
-    name: 'Course page',
-    description: 'Stuff',
-    image: '/demo.png',
-  },
-  {
-    name: 'Cloud-based backend',
-    description: 'Stuff',
-    image: '/demo.png',
+    image: '/lesson_logged_in.png',
   },
 ]
 

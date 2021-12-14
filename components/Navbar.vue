@@ -102,12 +102,12 @@ export default {
         type: 'nuxt-link',
         target: '',
       },
-      {
-        title: 'Blog',
-        path: '/blog',
-        type: 'nuxt-link',
-        target: '',
-      },
+      // {
+      //   title: 'Blog',
+      //   path: '/blog',
+      //   type: 'nuxt-link',
+      //   target: '',
+      // },
 
       // {
       //   title: 'Docs',

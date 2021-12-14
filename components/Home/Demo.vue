@@ -4,24 +4,32 @@
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
         <div class="relative flex flex-col justify-center items-center gap-8">
           <div class="text-center prose lg:prose-lg mx-auto">
-            <h2 class="">Example CourseKit site</h2>
+            <h2 class="">Example site tour</h2>
+            <p class="">
+              Let's see a Nuxt + Tailwind site enabled with CourseKit
+            </p>
           </div>
           <div>
-            <div class="flex flex-col-reverse lg:flex-row gap-6 justify-center">
-              <img
-                :src="currentStep.image"
-                alt="CourseKit Demo"
-                class="w-full h-full lg:w-2/3 object-center object-cover shadow-md"
-              />
+            <div class="flex flex-col gap-6 justify-center items-center">
               <DemoSteps
                 :steps="steps"
                 @selected="onSelect"
                 class="lg:w-64 flex-shrink-0 lg:mt-6"
               />
+              <div class="lg:w-2/3 flex flex-row items-center gap-4 justify-center">
+                <ChevronLeftIcon class="text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="previousStep" />
+                <img
+                  :src="currentStep.image"
+                  alt="CourseKit Demo"
+                  class="object-center object-cover shadow-md cursor-pointer"
+                  @click="nextStep"
+                />
+                <ChevronRightIcon class="text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="nextStep" />
+              </div>
+              <p class="prose italic text-gray-500">
+                {{ currentStep.description }}
+              </p>
             </div>
-            <p class="prose max-w-none relative mt-6 text-center">
-              {{ currentStep.description }}
-            </p>
           </div>
         </div>
       </div>
@@ -30,34 +38,35 @@
 </template>
 <script>
 import DemoSteps from './DemoSteps'
+import { ChevronLeftIcon, ChevronRightIcon } from '@vue-hero-icons/outline'
 const steps = [
+  {
+    name: 'Course page (logged out)',
+    description: 'We start at the course landing page (just static content).',
+    image: '/course_logged_out.png',
+  },
   {
     name: 'Lesson page (logged out)',
     description:
-      'Until a student enrols and logs in they will not be able see your content.',
+      'A lesson page. The video is not viewable until a student enrols and logs in.',
     image: '/lesson_logged_out.png',
     current: true,
   },
   {
-    name: 'Course page (logged out)',
-    description: 'The course page shows lesson info',
-    image: '/course_logged_out.png',
-  },
-  {
     name: 'Course page (logged in)',
-    description: 'Once logged in, the UI is aware of watched lessons',
+    description: 'Once logged in, a student can see watched lessons and resume where they left off.',
     image: '/course_logged_in.png',
   },
   {
     name: 'Lesson page (logged in)',
     description:
-      'Once logged in, a student can watch you video and mark complete',
+      'Now that the student is authenticated they can watch a video and mark it complete.',
     image: '/lesson_logged_in.png',
   },
 ]
 
 export default {
-  components: { DemoSteps },
+  components: { DemoSteps, ChevronLeftIcon, ChevronRightIcon },
   data: () => ({
     steps,
   }),
@@ -68,6 +77,20 @@ export default {
         return step
       })
     },
+    nextStep() {
+      let nextStep = this.steps.findIndex(step => step.current) + 1
+      if (nextStep === this.steps.length) {
+        nextStep = 0
+      }
+      this.onSelect(nextStep)
+    },
+    previousStep() {
+      let nextStep = this.steps.findIndex(step => step.current) - 1
+      if (nextStep < 0) {
+        nextStep = this.steps.length - 1
+      }
+      this.onSelect(nextStep)
+    }
   },
   computed: {
     currentStep() {

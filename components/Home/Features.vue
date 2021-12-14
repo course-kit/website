@@ -61,9 +61,9 @@ export default {
   data: () => ({
     features: [
       {
-        title: 'Create your site',
+        title: 'Create a static site',
         description:
-          'Use your favorite frontend tools to build a site for your course. CourseKit is static-site friendly - no need for a server.',
+          'Use your favorite frontend tools and build a static site for your course. No need for a server.',
         icon: DesktopComputerIcon,
       },
       {
@@ -75,13 +75,13 @@ export default {
       {
         title: 'Upload videos',
         description:
-          'Use our drag and drop cloud interface to upload your videos and arrange into courses.',
+          'Through our drag-and-drop cloud interface you can upload your videos and arrange into courses.',
         icon: CloudUploadIcon,
       },
       {
         title: 'Add a payment gateway',
         description:
-          'Enrol students with a webhook from Stripe, Gumroad, etc. Your course is now ready to go live!',
+          'Enrol students with a webhook from Stripe, Gumroad, etc. Your online course is ready to go!',
         icon: CurrencyDollarIcon,
       },
     ],

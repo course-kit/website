@@ -34,7 +34,7 @@
             <!-- Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
             <component
               :is="link.type"
-              v-for="link in links"
+              v-for="link in leftLinks"
               :key="link.path"
               :to="link.path"
               :href="link.path"
@@ -49,8 +49,16 @@
           </div>
         </div>
         <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-        ></div>
+          class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <nuxt-link
+            v-for="link in rightLinks"
+            :key="link.path"
+            class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
+            :to="link.path"
+            >Join beta</nuxt-link
+          >
+        </div>
       </div>
     </div>
 
@@ -58,7 +66,7 @@
       <div class="pt-2 pb-4 space-y-1">
         <component
           :is="link.type"
-          v-for="link in links"
+          v-for="link in leftLinks.concat(rightLinks)"
           :key="link.path"
           :to="link.path"
           :href="link.path"
@@ -87,7 +95,7 @@ export default {
   },
   data: () => ({
     open: false,
-    links: [
+    leftLinks: [
       {
         title: 'Home',
         path: '/',
@@ -100,12 +108,6 @@ export default {
         type: 'nuxt-link',
         target: '',
       },
-      {
-        title: 'Join Beta',
-        path: '/#join',
-        type: 'nuxt-link',
-        target: '',
-      },
 
       // {
       //   title: 'Docs',
@@ -113,12 +115,14 @@ export default {
       //   type: 'a',
       //   target: '_blank'
       // },
-      // {
-      //   title: 'Blog',
-      //   path: '/blog',
-      //   type: 'nuxt-link',
-      //   target: ''
-      // },
+    ],
+    rightLinks: [
+      {
+        title: 'Sign up',
+        path: '/#join',
+        type: 'nuxt-link',
+        target: '',
+      },
     ],
   }),
   methods: {

@@ -8,8 +8,16 @@
           </div>
           <div>
             <div class="flex flex-col-reverse lg:flex-row gap-6 justify-center">
-              <img :src="currentStep.image" alt="CourseKit Demo" class="w-full h-full lg:w-2/3 object-center object-cover shadow-md" />
-              <DemoSteps :steps="steps" @selected="onSelect" class="lg:w-64 flex-shrink-0 lg:mt-6" />
+              <img
+                :src="currentStep.image"
+                alt="CourseKit Demo"
+                class="w-full h-full lg:w-2/3 object-center object-cover shadow-md"
+              />
+              <DemoSteps
+                :steps="steps"
+                @selected="onSelect"
+                class="lg:w-64 flex-shrink-0 lg:mt-6"
+              />
             </div>
             <p class="prose max-w-none relative mt-6 text-center">
               {{ currentStep.description }}
@@ -21,35 +29,37 @@
   </div>
 </template>
 <script>
-import DemoSteps from "./DemoSteps";
+import DemoSteps from './DemoSteps'
 const steps = [
   {
     name: 'Lesson page (logged out)',
-    description: 'Until a student enrols and logs in they will not be able see your content.',
+    description:
+      'Until a student enrols and logs in they will not be able see your content.',
     image: '/demo.png',
-    current: true
+    current: true,
   },
   {
     name: 'Lesson page (logged in)',
-    description: 'Once logged in, a student can watch you video and mark complete',
-    image: '/demo.png'
+    description:
+      'Once logged in, a student can watch you video and mark complete',
+    image: '/demo.png',
   },
   {
     name: 'Course page',
     description: 'Stuff',
-    image: '/demo.png'
+    image: '/demo.png',
   },
   {
     name: 'Cloud-based backend',
     description: 'Stuff',
-    image: '/demo.png'
+    image: '/demo.png',
   },
 ]
 
 export default {
-  components: {DemoSteps},
+  components: { DemoSteps },
   data: () => ({
-    steps
+    steps,
   }),
   methods: {
     onSelect(selected) {
@@ -57,20 +67,22 @@ export default {
         step.current = index === selected
         return step
       })
-    }
+    },
   },
   computed: {
-    currentStep () {
-      return this.steps.find(step => step.current)
-    }
-  }
+    currentStep() {
+      return this.steps.find((step) => step.current)
+    },
+  },
 }
 </script>
 <style>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

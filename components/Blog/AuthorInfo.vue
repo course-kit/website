@@ -1,9 +1,11 @@
 <template>
-  <div class="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
+  <div
+    class="flex flex-col md:flex-row justify-between items-start md:items-center w-full"
+  >
     <div class="flex items-center">
       <div
         class="flex items-center justify-center rounded-full overflow-hidden relative bg-gray-200"
-        :class="isLarge ? 'w-12 h-12' : 'w-10 h-10' "
+        :class="isLarge ? 'w-12 h-12' : 'w-10 h-10'"
       >
         <img alt="Anthony Gore" src="/anthonygore.jpg" />
       </div>
@@ -23,8 +25,8 @@ export default {
     date: String,
     isLarge: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="bg-white rounded-md shadow-md overflow-hidden " :to="path">
+  <nuxt-link class="bg-white rounded-md shadow-md overflow-hidden" :to="path">
     <div
       class="bg-cover bg-center h-60 p-4"
       :style="{ 'background-image': `url(${thumb})` }"
@@ -14,9 +14,9 @@
   </nuxt-link>
 </template>
 <script>
-import AuthorInfo from "./AuthorInfo";
+import AuthorInfo from './AuthorInfo'
 export default {
-  components: {AuthorInfo},
+  components: { AuthorInfo },
   props: {
     thumb: {
       type: String,

@@ -48,6 +48,7 @@ export default {
         version: 3
       }
     ],
+    '@nuxtjs/gtm',
   ],
 
   publicRuntimeConfig: {
@@ -56,6 +57,9 @@ export default {
       version: 3,
       siteKey: process.env.RECAPTCHA_SITE_KEY
     },
+    gtm: {
+      id: process.env.GTM_ID
+    }
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

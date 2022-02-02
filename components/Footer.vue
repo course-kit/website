@@ -4,7 +4,7 @@
       <div class="flex justify-center space-x-6">
         <a
           class="text-gray-400 hover:text-gray-500"
-          href="https://twitter.com/anthonygore/"
+          href="https://twitter.com/coursekitdev/"
           target="_blank"
         >
           <span class="sr-only">Twitter</span>

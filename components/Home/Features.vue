@@ -46,7 +46,7 @@
 <script>
 import {
   CodeIcon,
-  CloudUploadIcon,
+  PencilAltIcon,
   DesktopComputerIcon,
   CurrencyDollarIcon,
 } from '@vue-hero-icons/outline'
@@ -54,7 +54,7 @@ import {
 export default {
   components: {
     CodeIcon,
-    CloudUploadIcon,
+    PencilAltIcon,
     DesktopComputerIcon,
     CurrencyDollarIcon,
   },
@@ -69,17 +69,17 @@ export default {
       {
         title: 'Embed CourseKit widgets',
         description:
-          'Add our fully-customizable video player and course admin widgets with a few lines of JavaScript.',
+          'Add our fully-customizable JavaScript widgets to allow students to see and interact with your course.',
         icon: CodeIcon,
       },
       {
-        title: 'Upload videos',
+        title: 'Upload content',
         description:
-          'Through our drag-and-drop cloud interface you can upload your videos and arrange into courses.',
-        icon: CloudUploadIcon,
+          'Configure your courses and create lesson content with our markdown-based editor. Content can include video and text.',
+        icon: PencilAltIcon,
       },
       {
-        title: 'Add a payment gateway',
+        title: 'Add eCommerce',
         description:
           'Enrol students with a webhook from Stripe, Gumroad, etc. Your online course is ready to go!',
         icon: CurrencyDollarIcon,

@@ -32,9 +32,9 @@ export default {
   data: () => ({
     features: [
       {
-        title: 'Secure videos',
+        title: 'Secure content',
         description:
-          'Token-based auth ensures users must be enrolled before they can see your content.',
+          'Plug-and-play auth system to ensure only enrolled users can see your content.',
       },
       {
         title: 'No server required',
@@ -49,10 +49,10 @@ export default {
       {
         title: 'Integrate with anything',
         description:
-          'CourseKit plays nicely with all JS frameworks and payment gateways.',
+          'CourseKit plays nicely with all JavaScript frameworks, video hosting, eCommerce, email, etc.',
       },
       {
-        title: 'Course admin tools out-of-the-box',
+        title: 'Admin tools out-of-the-box',
         description:
           'All the features of online course are supplied as widgets including video, login, watched video toggles, etc.',
       },

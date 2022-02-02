@@ -17,7 +17,7 @@ import Demo from '../components/Home/Demo'
 
 const title = 'CourseKit | Headless Online Video Course Platform for Developers'
 const description =
-  'The easiest way to create a fully-custom online video course. Secure video + course admin feature with just a few lines of JavaScript!'
+  'The easiest way to create a full-featured, custom online course, exactly how you want it. Use your favorite frontend tools - no server required!'
 const url = 'https://coursekit.dev/'
 const image = `${url}coursekit_meta.png`
 

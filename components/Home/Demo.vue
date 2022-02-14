@@ -16,15 +16,25 @@
                 @selected="onSelect"
                 class="lg:w-64 flex-shrink-0 lg:mt-6"
               />
-              <div class="lg:w-2/3 flex flex-row items-center gap-4 justify-center">
-                <ChevronLeftIcon class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="previousStep" />
+              <div
+                class="lg:w-2/3 flex flex-row items-center gap-4 justify-center"
+              >
+                <ChevronLeftIcon
+                  class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer"
+                  size="40"
+                  @click="previousStep"
+                />
                 <img
                   :src="currentStep.image"
                   alt="CourseKit Demo"
                   class="object-center object-cover shadow-md cursor-pointer"
                   @click="nextStep"
                 />
-                <ChevronRightIcon class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer" size="40" @click="nextStep" />
+                <ChevronRightIcon
+                  class="hidden lg:block text-gray-400 flex-shrink-0 hover:text-gray-500 cursor-pointer"
+                  size="40"
+                  @click="nextStep"
+                />
               </div>
               <div class="prose italic text-gray-500 text-center">
                 <span class="font-bold">{{ currentStep.name }}.</span>
@@ -49,13 +59,13 @@ const steps = [
   },
   {
     name: 'Lesson page (logged out)',
-    description:
-      'The lesson video is not viewable until a student enrols.',
-    image: '/lesson_logged_out.png'
+    description: 'The lesson video is not viewable until a student enrols.',
+    image: '/lesson_logged_out.png',
   },
   {
     name: 'Course page (logged in)',
-    description: 'Watched lessons are marked and the student resume where they left off.',
+    description:
+      'Watched lessons are marked and the student resume where they left off.',
     image: '/course_logged_in.png',
   },
   {
@@ -67,14 +77,14 @@ const steps = [
   {
     name: 'Payment page',
     description:
-      'We\'ve integrated with Gumroad to accept payments and use their webhook feature to enrol students via the CourseKit API.',
-    image: '/checkout_page.png'
+      "We've integrated with Gumroad to accept payments and use their webhook feature to enrol students via the CourseKit API.",
+    image: '/checkout_page.png',
   },
   {
     name: 'Auth page',
     description:
       'All auth is handled by CourseKit. After purchasing a course, students create an account so they can access your content.',
-    image: '/auth_page.png'
+    image: '/auth_page.png',
   },
 ]
 
@@ -91,19 +101,19 @@ export default {
       })
     },
     nextStep() {
-      let nextStep = this.steps.findIndex(step => step.current) + 1
+      let nextStep = this.steps.findIndex((step) => step.current) + 1
       if (nextStep === this.steps.length) {
         nextStep = 0
       }
       this.onSelect(nextStep)
     },
     previousStep() {
-      let nextStep = this.steps.findIndex(step => step.current) - 1
+      let nextStep = this.steps.findIndex((step) => step.current) - 1
       if (nextStep < 0) {
         nextStep = this.steps.length - 1
       }
       this.onSelect(nextStep)
-    }
+    },
   },
   computed: {
     currentStep() {

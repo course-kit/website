@@ -6,8 +6,9 @@
           Static Blog + CourseKit = Amazing Online Course Site
         </h1>
         <p class="prose lg:prose-lg">
-          The easiest way to create a full-featured, custom online course, exactly how you want it.
-          Use your favorite frontend tools - no server required!
+          The easiest way to create a full-featured, custom online course,
+          exactly how you want it. Use your favorite frontend tools - no server
+          required!
         </p>
       </div>
       <div

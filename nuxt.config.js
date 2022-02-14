@@ -59,7 +59,8 @@ export default {
     },
     gtm: {
       id: process.env.GTM_ID
-    }
+    },
+    formUrl: process.env.FORM_URL
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

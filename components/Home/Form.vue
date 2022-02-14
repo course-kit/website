@@ -118,7 +118,7 @@ export default {
               credentials: 'include',
             },
             body: JSON.stringify({
-              name: 'John' + Math.random(),
+              name: this.name,
               email: this.email,
               captchaToken: token,
             }),

@@ -125,6 +125,7 @@ export default {
           })
           this.loading = false
           if (status === 200) {
+            this.$gtm.push({ event: 'join_beta' })
             this.message = {
               text: 'Submission successful!',
               classes: 'bg-green-200 text-green-900',

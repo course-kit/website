@@ -44,5 +44,60 @@ export default {
       page,
     }
   },
+  computed: {
+    title() {
+      return `CourseKit Blog | ${this.page.title}`
+    },
+    description() {
+      return this.page.description
+    },
+    url() {
+      return `https://coursekit.dev/blog${this.page.path}`
+    },
+    image() {
+      return `https://coursekit.dev${this.page.image}`
+    },
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.description,
+        },
+        {
+          property: 'og:description',
+          content: this.description,
+        },
+        {
+          name: 'twitter:description',
+          content: this.description,
+        },
+        {
+          property: 'og:image',
+          content: this.image,
+        },
+        {
+          name: 'twitter:image',
+          content: this.image,
+        },
+        {
+          property: 'og:title',
+          content: this.title,
+        },
+        {
+          name: 'twitter:title',
+          content: this.title,
+        },
+        { property: 'og:site_name', content: 'CourseKit' },
+        { property: 'og:url', content: this.url },
+        { property: 'twitter:url', content: this.url },
+        { property: 'og:type', content: 'website' },
+        { name: 'robots', content: 'index,follow' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
+    }
+  },
 }
 </script>

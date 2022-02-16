@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-gray-100 bg-white" id="demo">
+  <div class="relative bg-gray-50" id="demo">
     <div class="px-4 sm:px-6 lg:px-8 py-12 sm:py-24 sm:px-12">
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
         <div class="relative flex flex-col justify-center items-center gap-8">

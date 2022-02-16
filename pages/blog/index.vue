@@ -10,7 +10,7 @@
         :path="`/blog/${post.slug}`"
         :title="post.title"
         :description="post.description"
-        :date="post.createdAt"
+        :date="post.date"
       ></Card>
     </div>
   </div>
@@ -21,8 +21,8 @@ export default {
   components: { Card },
   async asyncData({ $content }) {
     const posts = await $content()
-      .only(['title', 'image', 'tags', 'slug', 'description', 'createdAt'])
-      .sortBy('createdAt', 'desc')
+      .only(['title', 'image', 'tags', 'slug', 'description', 'date'])
+      .sortBy('date', 'desc')
       .fetch()
     return {
       posts,

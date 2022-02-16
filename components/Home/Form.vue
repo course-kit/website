@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-6 sm:px-8 lg:px-12 relative bg-gray-100"
+    class="container mx-auto px-6 sm:px-8 lg:px-12 relative bg-gray-50"
     id="join"
   >
     <div class="mx-auto sm:max-w-none lg:max-w-4xl">

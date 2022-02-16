@@ -1,8 +1,8 @@
 <template>
   <div
-    class="rounded-md bg-blue-100 p-8 flex flex-col gap-4 justify-center items-center"
+    class="rounded-sm bg-blue-50 py-8 px-10 flex flex-col gap-4 justify-center items-center"
   >
-    <h3 class="text-xl font-bold font-display">
+    <h3 class="text-xl font-bold font-display text-gray-800">
       Static Blog + CourseKit = Amazing Online Course Site
     </h3>
     <p class="pb-4 text-gray-600">

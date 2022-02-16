@@ -3,13 +3,11 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   // mode: "jit",
-  purge: {
-    content: [
-      "./components/**/*.{vue,js}",
-      "./layouts/**/*.vue",
-      "./pages/**/*.vue",
-    ]
-  },
+  content: [
+    "./components/**/*.{vue,js}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+  ],
   theme: {
     fontFamily: {
       display: ['Readex Pro', 'sans-serif'],
@@ -24,7 +22,7 @@ module.exports = {
           css: {
             color: theme('colors.gray.500'),
             h1: {
-              fontFamily: `${theme('fontFamily.display')}`
+              fontFamily: `${theme('fontFamily.display')}`,
             },
             h2: {
               fontFamily: `${theme('fontFamily.display')}`

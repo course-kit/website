@@ -10,7 +10,7 @@
         <img alt="Anthony Gore" src="/anthonygore.jpg" />
       </div>
       <div class="ml-4" :class="isLarge ? '' : 'text-sm'">
-        <p class="font-bold">Anthony Gore</p>
+        <p class="font-bold mb-1">Anthony Gore</p>
         <p class="text-gray-500">
           <span v-if="isLarge">Published&nbsp;</span>
           <span>{{ date.split('T')[0] }}</span>

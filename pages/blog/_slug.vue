@@ -1,25 +1,25 @@
 <template>
   <div
-    class="container mx-auto bg-white px-6 sm:px-8 lg:px-12 pt-12 lg:pt-16 pb-24"
+    class="container mx-auto bg-white px-6 sm:px-8 lg:px-16 pt-12 lg:pt-16 pb-24"
   >
-    <header class="mb-12">
-      <NavBack />
-      <h1
-        class="my-8 font-bold text-2xl md:text-5xl tracking-tight font-display"
-      >
-        {{ page.title }}
-      </h1>
-      <AuthorInfo :date="page.createdAt" />
-    </header>
-    <article class="flex-col flex lg:flex-row lg:space-x-12 xl:space-x-16">
+    <NavBack />
+    <article class="mt-8 flex-col flex lg:flex-row lg:space-x-12 xl:space-x-16">
       <aside class="flex-shrink-0 w-full lg:w-80 h-full lg:sticky top-24 mb-12">
-        <div class="pt-3 space-y-12">
+        <div class="space-y-12">
           <TOC :toc="page.toc" />
           <CTA />
         </div>
       </aside>
       <main class="overflow-hidden">
-        <div class="prose lg:prose-lg max-w-none">
+        <header class="mb-12">
+          <h1
+            class="mt-0 mb-8 font-bold text-2xl md:text-5xl tracking-tight font-display"
+          >
+            {{ page.title }}
+          </h1>
+          <AuthorInfo :date="page.date" />
+        </header>
+        <div class="prose lg:prose-lg max-w-none prose-a:text-blue-400 lg:prose-h2:mb-4 lg:prose-h3:mb-3 lg:prose-code:text-sm">
           <nuxt-content :document="page" />
         </div>
       </main>

@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     to="/blog"
-    class="inline-flex items-center space-x-1 text-blue-500 hover:text-blue-600 text-sm group"
+    class="inline-flex items-center space-x-1 text-blue-400 hover:text-blue-500 text-sm group font-bold"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

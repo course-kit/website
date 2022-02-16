@@ -4,7 +4,9 @@
   >
     <NavBack />
     <article class="mt-8 flex-col flex lg:flex-row lg:space-x-12 xl:space-x-16">
-      <aside class="flex-shrink-0 w-full lg:w-80 h-full lg:sticky top-24 mb-12 hidden lg:block">
+      <aside
+        class="flex-shrink-0 w-full lg:w-80 h-full lg:sticky top-24 mb-12 hidden lg:block"
+      >
         <div class="space-y-12">
           <TOC :toc="page.toc" />
           <CTA />
@@ -19,7 +21,9 @@
           </h1>
           <AuthorInfo :date="page.date" />
         </header>
-        <div class="prose lg:prose-lg max-w-none prose-a:font-bold prose-a:text-blue-400 lg:prose-h2:mb-4 lg:prose-h3:mb-3 lg:prose-code:text-sm">
+        <div
+          class="prose lg:prose-lg max-w-none prose-a:font-bold prose-a:text-blue-400 lg:prose-h2:mb-4 lg:prose-h3:mb-3 lg:prose-code:text-sm"
+        >
           <nuxt-content :document="page" />
         </div>
       </main>

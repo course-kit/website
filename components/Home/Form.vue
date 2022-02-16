@@ -7,10 +7,10 @@
       <div class="relative overflow-hidden py-12 sm:py-24">
         <div class="relative flex item-center flex-col">
           <div class="text-center prose lg:prose-lg mx-auto">
-            <h2 class="">Join as a beta tester</h2>
+            <h2 class="">Join as an early user</h2>
             <p class="">
-              CourseKit is currently an invite-only beta. If you'd like to be a
-              beta tester or get notified when we launch, enter your email
+              CourseKit is currently an invite-only beta. If you'd like to
+              request an invite or get notified when we launch, enter your email
               below.
             </p>
           </div>

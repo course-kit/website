@@ -31,33 +31,31 @@ export default {
   },
   data() {
     return {
-      currentlyActiveToc: "",
+      currentlyActiveToc: '',
       observer: null,
       observerOptions: {
         root: this.$refs.nuxtContent,
-        threshold: 0
-      }
-    };
+        threshold: 0,
+      },
+    }
   },
   mounted() {
-    this.observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute("id");
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute('id')
         if (entry.isIntersecting) {
-          this.currentlyActiveToc = id;
+          this.currentlyActiveToc = id
         }
-      });
-    }, this.observerOptions);
+      })
+    }, this.observerOptions)
 
     // Track all sections that have an `id` applied
-    document
-      .querySelectorAll(".nuxt-content h2[id]")
-      .forEach(section => {
-        this.observer.observe(section);
-      });
+    document.querySelectorAll('.nuxt-content h2[id]').forEach((section) => {
+      this.observer.observe(section)
+    })
   },
   beforeDestroy() {
-    this.observer.disconnect();
-  }
+    this.observer.disconnect()
+  },
 }
 </script>

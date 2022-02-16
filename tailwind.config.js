@@ -20,6 +20,12 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            'code::before': {
+              content: '""'
+            },
+            'code::after': {
+              content: '""'
+            },
             color: theme('colors.gray.500'),
             h1: {
               fontFamily: `${theme('fontFamily.display')}`,

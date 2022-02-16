@@ -1,6 +1,6 @@
 ---
 title: Introducing CourseKit
-description: 'Our headless platform for creating online courses is now in beta.'
+description: 'Learn about our headless platform for creating online courses which is now in beta.'
 image: '/blog/coursekit_intro.png'
 date: 2022-02-16
 ---

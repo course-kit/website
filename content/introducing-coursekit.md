@@ -155,7 +155,7 @@ Your frontend course site can be created with whatever tech stack you like, e.g.
 
 CourseKit is Jamstack-friendly, so I recommend you make this a static site and use the CourseKit JavaScript client to connect with the API and create your UI widgets.
 
-*Note: you can clone a [course site template](https://github.com/course-kit/nuxt-demo) to get up and running quickly.*
+*Note: you can clone a [course site template](https://github.com/course-kit/guides/blob/master/templates.md) to get up and running quickly.*
 
 ### Stripe
 

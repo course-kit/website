@@ -47,42 +47,42 @@
 import {
   CodeIcon,
   PencilAltIcon,
-  DesktopComputerIcon,
-  CurrencyDollarIcon,
+  TemplateIcon,
+  SpeakerphoneIcon,
 } from '@vue-hero-icons/outline'
 
 export default {
   components: {
     CodeIcon,
     PencilAltIcon,
-    DesktopComputerIcon,
-    CurrencyDollarIcon,
+    TemplateIcon,
+    SpeakerphoneIcon,
   },
   data: () => ({
     features: [
       {
-        title: 'Create a static site',
+        title: 'Choose a site template',
         description:
-          'Use your favorite frontend tools and build a static site for your course. No need for a server.',
-        icon: DesktopComputerIcon,
+          'Select one of our static site templates based on React or Vue (or create your own from scratch).',
+        icon: TemplateIcon,
       },
       {
-        title: 'Embed CourseKit widgets',
-        description:
-          'Add our fully-customizable JavaScript widgets to allow students to see and interact with your course.',
-        icon: CodeIcon,
-      },
-      {
-        title: 'Upload content',
+        title: 'Add content',
         description:
           'Configure your courses and create lesson content with our markdown-based editor. Content can include video and text.',
         icon: PencilAltIcon,
       },
       {
-        title: 'Add eCommerce',
+        title: 'Customize your site',
         description:
-          'Enrol students with a webhook from Stripe, Gumroad, etc. Your online course is ready to go!',
-        icon: CurrencyDollarIcon,
+          'Use CSS and JavaScript to make your site look and feel exactly how you want. Add integrations like email and ecommerce.',
+        icon: CodeIcon,
+      },
+      {
+        title: 'Launch!',
+        description:
+          'Deploy your site to static hosting. Your site is now ready for students to enroll!',
+        icon: SpeakerphoneIcon,
       },
     ],
   }),

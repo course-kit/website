@@ -23,7 +23,8 @@ export default {
   ],
 
   plugins: [
-    { src: '~/plugins/router-after-each.js', mode: 'client' }
+    { src: '~/plugins/router-after-each.js', mode: 'client' },
+    { src: 'plugins/vue-typer.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

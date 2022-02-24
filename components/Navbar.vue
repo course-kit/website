@@ -49,10 +49,28 @@
           </div>
         </div>
         <div
-          class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          class="hidden sm:ml-12 sm:flex sm:space-x-8"
+        >
+          <component
+            :is="link.type"
+            v-for="link in rightLinks.filter(link => link.type !== 'button')"
+            :key="link.path"
+            :to="link.path"
+            :href="link.path"
+            :target="link.target"
+            :class="{
+                'border-blue-400 border-b-2': isRouteActive(link.path),
+              }"
+            class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+          >
+            {{ link.title }}
+          </component>
+        </div>
+        <div
+          class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto  sm:space-x-8 sm:ml-6 sm:pr-0"
         >
           <nuxt-link
-            v-for="link in rightLinks"
+            v-for="link in rightLinks.filter(link => link.type === 'button')"
             :key="link.path"
             class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
             :to="link.path"
@@ -103,8 +121,14 @@ export default {
         target: '',
       },
       {
-        title: 'Blog',
-        path: '/blog',
+        title: 'Features',
+        path: '/features',
+        type: 'nuxt-link',
+        target: '',
+      },
+      {
+        title: 'Pricing',
+        path: '/pricing',
         type: 'nuxt-link',
         target: '',
       },
@@ -118,9 +142,15 @@ export default {
     ],
     rightLinks: [
       {
+        title: 'Blog',
+        path: '/blog',
+        type: 'nuxt-link',
+        target: '',
+      },
+      {
         title: 'Sign up',
         path: '/#join',
-        type: 'nuxt-link',
+        type: 'button',
         target: '',
       },
     ],

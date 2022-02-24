@@ -1,0 +1,62 @@
+<template>
+  <div class="pt-12 lg:pt-16">
+    <Form />
+  </div>
+</template>
+<script>
+import Hero from '../components/Home/Hero'
+import Form from '../components/Home/Form'
+import Video from '../components/Home/Video'
+import Features from '../components/Home/Features'
+import Benefits from '../components/Home/Benefits'
+import Demo from '../components/Home/Demo'
+
+const title = 'CourseKit | Features'
+const description =
+  'The easiest way to create a full-featured, custom online course, exactly how you want it. Use your favorite frontend tools - no server required!'
+const url = 'https://coursekit.dev/'
+const image = `${url}coursekit_meta.png`
+
+export default {
+  components: { Demo, Benefits, Features, Video, Form, Hero },
+  head: {
+    title,
+    meta: [
+      {
+        name: 'description',
+        content: description,
+      },
+      {
+        property: 'og:description',
+        content: description,
+      },
+      {
+        name: 'twitter:description',
+        content: description,
+      },
+      {
+        property: 'og:image',
+        content: image,
+      },
+      {
+        name: 'twitter:image',
+        content: image,
+      },
+      {
+        property: 'og:title',
+        content: title,
+      },
+      {
+        name: 'twitter:title',
+        content: title,
+      },
+      { property: 'og:site_name', content: 'CourseKit' },
+      { property: 'og:url', content: url },
+      { property: 'twitter:url', content: url },
+      { property: 'og:type', content: 'website' },
+      { name: 'robots', content: 'index,follow' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ],
+  },
+}
+</script>

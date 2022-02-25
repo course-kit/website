@@ -61,27 +61,27 @@ export default {
   data: () => ({
     features: [
       {
-        title: 'Choose a site template',
+        title: 'Choose a base template',
         description:
-          'Select one of our static site templates based on React or Vue (or create your own from scratch).',
+          'Get started quickly with a fully-customizable base template using your favorite frontend tools like React and Vue.',
         icon: TemplateIcon,
       },
       {
         title: 'Add content',
         description:
-          'Configure your courses and create lesson content with our markdown-based editor. Content can include video and text.',
+          'Configure your courses and create lesson content with our markdown-based editor.',
         icon: PencilAltIcon,
       },
       {
         title: 'Customize your site',
         description:
-          'Use CSS and JavaScript to make your site look and feel exactly how you want. Add integrations like email and ecommerce.',
+          'Use CSS and JavaScript to make your course look and feel exactly how you want. Add the integrations you need like video and ecommerce.',
         icon: CodeIcon,
       },
       {
         title: 'Launch!',
         description:
-          'Deploy your site to static hosting. Your site is now ready for students to enroll!',
+          'Deploy your site to static hosting. Your site is now ready for students to enroll and start learning!',
         icon: SpeakerphoneIcon,
       },
     ],

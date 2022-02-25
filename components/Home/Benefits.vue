@@ -37,9 +37,9 @@ export default {
           'Plug-and-play auth system to ensure only enrolled users can see your content.',
       },
       {
-        title: 'No server required',
+        title: 'Cloud-based content management',
         description:
-          'Skip the cost and hassle of setting up a backend. Our cloud API handles everything you need.',
+          'Skip the cost and hassle of setting up a backend. Our cloud dashboard handles everything you need.',
       },
       {
         title: 'Fully customizable UI and UX',
@@ -47,9 +47,9 @@ export default {
           'Our headless platform allows you to make your course look and feel exactly how you want.',
       },
       {
-        title: 'Integrate with anything',
+        title: 'Only the features you need',
         description:
-          'CourseKit plays nicely with all JavaScript frameworks, video hosting, eCommerce, email, etc.',
+          'Unlike the bloated LMSs you\'re used to, CourseKit allows you to add features you need through integrations like video hosting, eCommerce, email, etc.',
       },
       {
         title: 'Admin tools out-of-the-box',

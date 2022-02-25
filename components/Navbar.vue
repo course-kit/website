@@ -142,6 +142,12 @@ export default {
     ],
     rightLinks: [
       {
+        title: 'Docs',
+        path: 'https://github.com/course-kit/client',
+        type: 'a',
+        target: '_blank'
+      },
+      {
         title: 'Blog',
         path: '/blog',
         type: 'nuxt-link',

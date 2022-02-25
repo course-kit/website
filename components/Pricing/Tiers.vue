@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <div class="sm:flex sm:flex-col sm:align-center">
         <h1 class="text-4xl font-bold font-display mb-6 leading-12 sm:text-center">Pricing Plans</h1>
-        <p class="text-xl text-gray-500 sm:text-center">Start building for free, then add a site plan to go live. Account plans unlock additional features.</p>
+        <p class="text-xl text-gray-500 sm:text-center">Start building for free, then upgrade once your course is live.</p>
         <div class="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8">
           <button type="button" :class="monthlyClasses" @click="selected = 'monthly'">Monthly billing</button>
           <button type="button" class="ml-0.5" :class="yearlyClasses" @click="selected = 'yearly'">Yearly billing</button>
@@ -30,7 +30,7 @@ const tiers = [
     priceYearly: 0,
     description: 'No credit card required.',
     includedFeatures: [
-      'Max 50 students per course.',
+      'Max 30 students.',
       'Max 3 courses.'
     ],
   },

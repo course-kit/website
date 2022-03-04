@@ -38,6 +38,14 @@ module.exports = {
             },
             h4: {
               fontFamily: `${theme('fontFamily.display')}`
+            },
+            code: {
+              color: '#DD4A68',
+              backgroundColor: '#f5f2f0',
+              padding: '0.20em 0.35em'
+            },
+            blockquote: {
+              quotes: 'none'
             }
           },
         },

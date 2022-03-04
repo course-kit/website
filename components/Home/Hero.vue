@@ -2,7 +2,7 @@
   <div class="container mx-auto px-6 sm:px-8 lg:px-12 mb-16">
     <div class="flex gap-12 justify-center items-center flex-col md:flex-row">
       <div class="max-w-xl text-center md:text-left">
-        <h1 class="text-5xl font-bold font-display mb-6 leading-12">
+        <h1 class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12">
           <span>Build an online course with </span>
           <client-only>
             <vue-typer
@@ -37,6 +37,9 @@
   </div>
 </template>
 <style>
+.vue-typer .left {
+  white-space: nowrap
+}
 .vue-typer .custom.char {
   @apply text-blue-500
 }

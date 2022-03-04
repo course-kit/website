@@ -7,13 +7,13 @@ date: 2022-03-04
 
 A great way to share your knowledge is with an online course. Rather than being stuck with the boring and inflexible lesson pages offered by the well-known course platforms, we can build our own so we can make the design and UX exactly how we like.
 
-In this tutorial, I’ll show you how to create a single-page app course site using React. The features will include markdown-based content, embedded Vimeo videos, and other UI features.
+In this tutorial, I’ll show you how to create a single-page app course site using React. The features will include markdown-based content, embedded Vimeo videos, and lesson navigation.
 
-We’ll make this a purely frontend site so you won’t need a backend. Here’s what the home page, course page, and lesson page will look like:
+We’ll make this a static site so you won’t need a backend. Here’s what the home page, course page, and lesson page will look like:
 
 ![online-course-react-all_pages](/blog/online-course-react-all_pages.png)
 
-At the end of the tutorial, I’ll also show you how to (optionally) enroll students so you can track student progress and protect lesson content to those students who’ve paid so you can monetize your course. For this part, we’ll integrate [CourseKit](https://coursekit.dev) which is a headless API for hosting online courses.
+At the end of the tutorial, I’ll also show you how to (optionally) enroll students so you can track student progress and protect lesson content so you can monetize your course. For this part, we’ll integrate [CourseKit](https://coursekit.dev) which is a headless API for hosting online courses.
 
 You can view a demo of the finished product [here](https://online-course-react-demo.netlify.app/) and get the source code [here](https://github.com/anthonygore/react-course).
 
@@ -26,7 +26,7 @@ $ npx create-react-app react-course
 $ cd react-course
 ```
 
-We’ll also need [React Router](https://reactrouter.com/) for course pages.
+We’ll also need [React Router](https://reactrouter.com/) for setting up the course pages.
 
 ```bash
 $ npm install --save react-router-dom
@@ -38,15 +38,15 @@ With that done, let’s fire up the dev server and start building!
 $ npm start
 ```
 
-## Router and pages
+## Configure router and create pages
 
 Our courses app will have three pages:
 
-- The **home page** which will show the available courses.
-- A **course page** which will show the info of a specific course and its lessons. This will have a dynamic route `/courses/:courseId`.
-- A l**esson page** which will show a specific lesson. This will have a dynamic route `/courses/:courseId/lessons/:lessonId`.
+- A **home page** that will show the available courses.
+- A **course page** that will show the info of a specific course and its lessons. This will have a dynamic route `/courses/:courseId`.
+- A l**esson page** that will show a specific lesson. This will have a dynamic route `/courses/:courseId/lessons/:lessonId`.
 
-Since we’re using React Router, we’ll create a component for each of these pages. So let’s now create a file for each in a new directory, *src/pages*.
+Since we’re using React Router, we’ll create a component for each of these pages. Let’s put these in the directory, *src/pages*.
 
 ```bash
 $ mkdir src/pages
@@ -57,7 +57,7 @@ $ touch src/pages/Lesson.js
 
 ### Add router to project
 
-We’ll now need to edit *src/index.js* and wrap our main `App` component with `BrowserRouter` so that the router will work.
+We’ll now need to edit *src/index.js* and wrap our main `App` component with `BrowserRouter` so the router will function.
 
 *src/index.js*
 
@@ -78,9 +78,7 @@ ReactDOM.render(
 
 ### Add pages to App component
 
-We’ll now go to the `App` component and clear out the contents so we can create our own.
-
-This will include the three routes and pages we declared above. We’ll also have a `Footer` component which will be common across all pages.
+We’ll now go to the `App` component and clear out the contents. We'll then create our own template with the three routes and pages we declared above.
 
 *src/App.js*
 
@@ -120,15 +118,17 @@ With that done, we’ve set up the page structure of our course app.
 
 ## Create course data file
 
-Since we aren’t using a backend API, the data for our courses and lessons will be stored in a nested JavaScript object. This object will be used at runtime to populate the content of our app.
+Since we aren’t using a backend API, the data for our courses and lessons will be stored in a nested JavaScript array. This array will be used to populate the content of our app.
 
-Each course will have an `id`, `title`, `description` and a sub-array of lesson objects. 
+The array will consist of course objects with an `id`, `title`, `description`, and a sub-array of lesson objects. 
 
-The lesson objects will also have an `id`, `title`, and `description`, and will also include a `vimeoId` which will be the ID for the lesson’s video (this will be explained further below).
+The lesson objects will have an `id`, `title`, and `description`, and will also include a `vimeoId` which will be the ID for the lesson’s video (this will be explained below).
+
+> Tip: ensure your IDs are unique and sequential.
 
 *src/courses.js*
 
-```jsx
+```js
 const courses = [
   {
     id: 1,
@@ -164,18 +164,17 @@ const courses = [
 export default courses
 ```
 
-## Home page
+## Create home page
 
-Let’s now create the home page. We’ll first import the `courses` array from the module we just created.
+Let’s now start building our pages, beginning with the home page. We’ll first import the `courses` array from the module we just created.
 
 In the component template, we’ll map the array and pass the data into a new component `CourseSummary`.
 
 *src/pages/Home.js*
 
 ```jsx
-import data from '../data'
+import courses from '../courses'
 import CourseSummary from '../components/CourseSummary'
-const { courses } = data
 
 function Home() {
   return (
@@ -195,7 +194,7 @@ export default Home
 
 ### CourseSummary component
 
-This component will do the job of displaying each course title and a link to the course, allowing the user to select the course they want to do. We pass in the course information via props.
+This component will display each course's title and description and will provide a link to the course, allowing the user to select the course they want to take. We pass in the course information via props.
 
 *src/components/CourseSummary.js*
 
@@ -232,15 +231,15 @@ function CourseSummary(props) {
 export default CourseSummary
 ```
 
-With that done, here’s what our home page will look like once a bit of CSS has been added for styling (I won’t show that here for brevity).
+With that done, here’s what our home page will look like once a bit of CSS has been added (I won’t show that here for brevity but you can see it in the [source code](https://github.com/anthonygore/react-course).).
 
 ![online-course-react-home](/blog/online-course-react-home.png)
 
-## Course page
+## Create course page
 
 The next page we’ll create is the course page. Note that the page path `/courses/:courseId` has a dynamic segment for the course ID which is how we know which course’s data to show. 
 
-Let’s use the `useParams` hook from React Router to extract the dynamic segment.
+Let’s use the `useParams` hook from React Router to extract the dynamic segment at runtime.
 
 *src/pages/Course.js*
 
@@ -255,9 +254,9 @@ function Course() {
 export default Course
 ```
 
-Now we can use the ID to get the relevant course data from the data module with an array `find`.
+Now we can use the ID to get the relevant course data from the courses data with an array `find`.
 
-*Tip: if the find returns null you shoudl probably show a 404 page.*
+> Tip: if the find returns null you should probably show a 404 page.
 
 *src/pages/Course.js*
 
@@ -275,7 +274,7 @@ export default Course
 
 We can now define a template for the course. The header will include a breadcrumb at the top of the page and details of the course including the title and description.
 
-We’ll then have a link to the first lesson with the text “Start course”. We’ll also have a summary of the lessons included in the course which we create by mapping over the `lessons` sub-property and passing data to another component `LessonSummary`.
+We’ll then have a link to the first lesson with the text “Start course”. We’ll also display summaries of the lessons included in the course which we create by mapping over the `lessons` sub-property and passing data to another component `LessonSummary`.
 
 *src/pages/Course.js*
 
@@ -363,9 +362,9 @@ With that done, here’s what the course page will look like:
 
 ![online-course-react-course](/blog/online-course-react-course.png)
 
-## Lesson page
+## Create lesson page
 
-Similar to the course page, the lesson page includes dynamic segments in the URL. This time, we have both the `courseId` and `lessonId` allowing us to retrieve the correct course and lesson objects using array finds.
+Similar to the course page, the lesson page includes dynamic segments in the URL. This time, we have both a `courseId` and `lessonId` allowing us to retrieve the correct course and lesson objects using array finds.
 
 *src/pages/Lesson.js*
 
@@ -386,13 +385,15 @@ export default Lesson
 
 Each lesson will have an associated video. In this demo, we’ll be using a [Vimeo](https://vimeo.com/) video, though you could use any video service that allows embedding in your own site.
 
-All you need to do is grab the video’s ID after it has been uploaded and add it to the courses data module. The ID is normally a number like “76979871”.
+All you need to do is grab the video’s ID after it has been uploaded and add it to the courses data module. The ID is normally a number like `76979871`.
 
-At runtime, we’ll embed a Vimeo video player and load the video using ID. To do this, let’s install the [React Vimeo](https://github.com/u-wave/react-vimeo) component.
+At runtime, we’ll embed a Vimeo video player and load the video using its ID. To do this, let’s install the [React Vimeo](https://github.com/u-wave/react-vimeo) component.
 
 ```bash
 $ npm i -S @u-wave/react-vimeo
 ```
+
+### Lesson page component
 
 Now let’s create a template for our Lesson page component. Like the course page, we’ll provide a breadcrumb and the lesson title at the top of the template.
 
@@ -427,11 +428,11 @@ function Lesson() {
 export default Lesson
 ```
 
-### “Complete and continue” button
+### Complete and continue button
 
-The last thing we’ll add to the lesson page is a “Complete and continue” button. This allows the user to navigate to the next lesson once they’ve finished watching the video.
+The last thing we’ll add to the lesson page is a *Complete and continue* button. This allows the user to navigate to the next lesson once they’ve finished watching the video.
 
-Let’s create a new component called `CompleteAndContinueButton`*.* This will use React Router’s `useNavigate` hook to navigate to the lesson passed in as a prop.
+Let’s create a new component called `CompleteAndContinueButton`. This will use React Router’s `useNavigate` hook to navigate to the next lesson (whose ID is passed in as a prop).
 
 *src/components/CompleteAndContinueButton.js*
 
@@ -453,7 +454,7 @@ function CompleteAndContinueButton(props) {
 export default CompleteAndContinueButton
 ```
 
-We’ll add this component directly under the `Vimeo` component. Note that we’ll need to get the next lesson ID and pass it as a prop. We’ll create a simple function `nextLessonId()` to find this.
+We’ll add this component directly under the `Vimeo` component in the lesson page template. Note that we’ll need to get the next lesson ID and pass it as a prop. We’ll create a function `nextLessonId()` to find this.
 
 *src/pages/Lesson.js*
 
@@ -489,35 +490,37 @@ export default Lesson
 
 With that done, here’s what our lesson page will look like. The video is, of course, playable, and the student can navigate to the next lesson once they’ve finished watching.
 
-![online-course-react-lesson](/blog/online-course-react-lessons.png)
+![online-course-react-lesson](/blog/online-course-react-lesson.png)
 
-## Student enrollments
+## Add student enrollments
 
-Right now, our app has the basic functionality of a course: a student can select a course, a lesson, and watch the video.
+Right now, our app has the basic functionality of a course: a student can select a course, select a lesson, and watch the video.
 
-However, there is an important aspect of online courses that we have not covered - personalization. Students want to do things like track lessons they’ve already completed.
+There are other important aspects of online courses that we have not included, though. 
 
-Not only that, but we also may want to protect our content so only paying students can see it.
+Firstly, personalization. Students want to be able to track the lessons they’ve already completed in case they don't finish the course in one go.
+
+Secondly, we may want to protect our content so only paying students can see it. That way we can monetize our course.
 
 Both these features require an auth system allowing students to enroll so we know which courses they’ve purchased and which lessons they’ve completed. 
 
 ### CourseKit
 
-Creating a course backend is an ardous task. An alternative is to use [CourseKit](https://coursekit.dev), a headless API for online courses which we could easily plugin to the app we’ve created.
+Creating a course backend is an arduous task. An alternative is to use [CourseKit](https://coursekit.dev), a headless API for online courses which we could easily plug into the app we’ve created.
 
-**CourseKit is designed to provide exactly the features we’re missing in our app: student management and role-based access to content.**
+CourseKit is designed to provide exactly the features we’re missing in our app: student management and role-based access to content.
 
 ### Adding CourseKit to our project
 
-To add CourseKit to this project we could create an account and transfer our course data there. We’d then use the CourseKit JavaScript client to call the data via API.
+To add CourseKit to this project we'd create an account and transfer our course data there. We’d then use the CourseKit JavaScript client to call the data through the API.
 
-Here’s what the lesson page would look like if we added CourseKit. Note that the content is hidden until the user authenticates!
+Here’s what the lesson page would look like if we added CourseKit. Note how the content is hidden until the user authenticates.
 
 ![online-course-react-lesson_auth](/blog/online-course-react-lesson_auth.png)
 
-Here’s the [full demo](https://demo.coursekit.dev) of this site with CourseKit integrated.
+> Here’s the [full demo](https://demo.coursekit.dev) of this site with CourseKit integrated.
 
-## Join as an early user
+## Join CourseKit as an early user
 
 CourseKit is currently in public beta, meaning it is launched and it works, but some features (e.g. analytics) are still in progress.
 

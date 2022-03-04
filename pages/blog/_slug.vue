@@ -101,3 +101,10 @@ export default {
   },
 }
 </script>
+<style>
+.prose :not(pre) > code {
+  color: #DD4A68;
+  background-color: #f5f2f0;
+  padding: 0.20em 0.35em;
+}
+</style>

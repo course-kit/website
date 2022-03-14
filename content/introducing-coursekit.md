@@ -44,9 +44,9 @@ Like all good developer platforms, CourseKit optimizes for flexibility and creat
 
 ## Want to try CourseKit?
 
-In a moment, I’ll explain the features of CourseKit in more detail. However, if you prefer to jump ahead and try it yourself, you can request an invite for the beta version by leaving your details here:
+In a moment, I’ll explain the features of CourseKit in more detail. However, if you prefer to jump ahead and try it yourself, you can create an account here:
 
-[Join CourseKit beta list](https://coursekit.dev/#join)
+[Get started with CourseKit](https://coursekit.dev/#join)
 
 ## Key features of CourseKit
 
@@ -171,6 +171,6 @@ Vimeo is a cheap and effective way to create video content. Vimeo videos can eas
 
 CourseKit is currently in public beta, meaning it is launched and it works, but some features (e.g. analytics) are still in progress.
 
-We have limited invitations for early users. If you’d like to request one, or if you’d just like to stay informed about the progress of CourseKit, be sure to leave your details on this page:
+If you’d like to try it out, create a free account here:
 
-[Join CourseKit beta list](https://coursekit.dev/#join)
+[Get started with CourseKit](https://coursekit.dev/#join)

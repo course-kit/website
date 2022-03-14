@@ -51,13 +51,20 @@
         <div
           class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <nuxt-link
+          <component
+            :is="link.type"
             v-for="link in rightLinks"
             :key="link.path"
-            class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
             :to="link.path"
-            >Join beta</nuxt-link
+            :href="link.path"
+            :target="link.target"
+            :class="{
+              'border-blue-400 border-b-2': isRouteActive(link.path),
+            }"
+            class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
           >
+            {{ link.title }}
+          </component>
         </div>
       </div>
     </div>
@@ -116,15 +123,19 @@ export default {
       //   target: '_blank'
       // },
     ],
-    rightLinks: [
-      {
-        title: 'Sign up',
-        path: '/#join',
-        type: 'nuxt-link',
-        target: '',
-      },
-    ],
   }),
+  computed: {
+    rightLinks() {
+      return [
+        {
+          title: 'Sign up',
+          path: this.$config.dashboardUrl,
+          type: 'a',
+          target: '',
+        },
+      ]
+    },
+  },
   methods: {
     isRouteActive(link) {
       return this.$route.path === link

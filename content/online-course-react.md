@@ -520,10 +520,10 @@ Here’s what the lesson page would look like if we added CourseKit. Note how th
 
 > Here’s the [full demo](https://demo.coursekit.dev) of this site with CourseKit integrated.
 
-## Join CourseKit as an early user
+## Join as an early user
 
 CourseKit is currently in public beta, meaning it is launched and it works, but some features (e.g. analytics) are still in progress.
 
-We have limited invitations for early users. If you’d like to request one, or if you’d just like to stay informed about the progress of CourseKit, be sure to leave your details on this page:
+If you’d like to try it out, create a free account here:
 
-[Join CourseKit beta list](https://coursekit.dev/#join)
+[Get started with CourseKit](https://coursekit.dev/#join)

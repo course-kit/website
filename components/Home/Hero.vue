@@ -25,9 +25,9 @@
           exactly how you want it. Use your favorite frontend tools - no server
           required!
         </p>
-        <div class="pt-8">
-          <a :href="$config.dashboardUrl" class="relative h-12 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10 mr-3">Start 14-day trial</a>
-          <a href="https://demo.coursekit.dev" target="_blank" class="relative h-12 rounded-md border px-5 py-3 bg-white text-blue-500 font-medium text-white border-blue-400 hover:bg-gray-50 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10">Try demo</a>
+        <div class="pt-8 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4">
+          <a :href="$config.dashboardUrl" class="flex-shrink-0 flex-grow-0 relative h-12 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10">Start 14-day trial</a>
+          <a href="https://demo.coursekit.dev" target="_blank" class="flex-shrink-0 flex-grow-0 relative h-12 rounded-md border px-5 py-3 bg-white text-blue-500 font-medium text-white border-blue-400 hover:bg-gray-50 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10">Try demo</a>
         </div>
       </div>
       <div

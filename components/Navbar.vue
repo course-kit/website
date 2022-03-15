@@ -128,7 +128,7 @@ export default {
     rightLinks() {
       return [
         {
-          title: 'Sign up',
+          title: 'Start 14-day trial',
           path: this.$config.dashboardUrl,
           type: 'a',
           target: '',

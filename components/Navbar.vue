@@ -137,6 +137,12 @@ export default {
         type: 'nuxt-link',
         target: '',
       },
+      {
+        title: 'Demo',
+        path: 'https://demo.coursekit.dev',
+        type: 'a',
+        target: '_blank',
+      },
     ],
     rightLinks: [
       {

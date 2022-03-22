@@ -41,6 +41,16 @@ const items = [
   },
   {
     isLeft: true,
+    title: 'Integrate with anything',
+    descriptions: [
+      'Unlike the LMS you\'re used to, CourseKit is not bloated with features you don\'t need.',
+      'You can add features like video, ecommerce, and marketing automation, if and when you need them, with third-party integrations.',
+      'These integrations are simple to setup through the developer API.'
+    ],
+    img: '/features/integrations.png'
+  },
+  {
+    isLeft: false,
     title: 'Fully-customizable site templates',
     descriptions: [
       'To get you up and running quickly we provide fully-customizable base templates for your site.',
@@ -52,16 +62,6 @@ const items = [
     },
     img: '/features/react-template.png'
   },
-  {
-    isLeft: false,
-    title: 'Integrate with anything',
-    descriptions: [
-      'Unlike the LMS you\'re used to, CourseKit is not bloated with features you don\'t need.',
-      'You can add features like video, ecommerce, and marketing automation, if and when you need them, with third-party integrations.',
-      'These integrations are simple to setup through the developer API.'
-    ],
-    img: '/features/integrations.png'
-  }
 ]
 
 export default {

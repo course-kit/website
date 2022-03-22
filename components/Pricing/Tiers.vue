@@ -1,13 +1,11 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="bg-white">
-    <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+  <div class="">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="sm:flex sm:flex-col sm:align-center">
-        <h1 class="text-4xl font-bold font-display mb-6 leading-12 sm:text-center">Pricing Plans</h1>
-        <p class="text-xl text-gray-500 sm:text-center">Start building for free, then upgrade once your course is live.</p>
-        <div class="relative self-center mt-6 bg-gray-100 rounded-lg p-0.5 flex sm:mt-8">
-          <button type="button" :class="monthlyClasses" @click="selected = 'monthly'">Monthly billing</button>
-          <button type="button" class="ml-0.5" :class="yearlyClasses" @click="selected = 'yearly'">Yearly billing</button>
+        <div class="relative self-center mt-6 rounded-lg p-0.5 flex sm:mt-8">
+          <button type="button" class="border shadow-sm" :class="monthlyClasses" @click="selected = 'monthly'">Monthly billing</button>
+          <button type="button" class="ml-0.5 border shadow-sm" :class="yearlyClasses" @click="selected = 'yearly'">Yearly billing</button>
         </div>
       </div>
       <div
@@ -33,20 +31,10 @@ const tiers = [
       'Max 1 school'
     ],
   },
-  // {
-  //   name: 'Basic',
-  //   href: '#join',
-  //   priceMonthly: 49,
-  //   description: 'All the basics for starting a new business',
-  //   includedFeatures: [
-  //     'Max 1000 students per course.',
-  //     'Max 10 courses.'
-  //   ],
-  // },
   {
     name: 'Agency',
-    priceMonthly: 49,
-    priceYearly: 39,
+    priceMonthly: 99,
+    priceYearly: 89,
     description: 'All the basics for starting a new business',
     includedFeatures: [
       'Unlimited students & courses',
@@ -78,10 +66,10 @@ export default {
   },
   computed: {
     monthlyClasses () {
-      return this.buttonClasses.concat(this.selected === 'monthly' ? ' bg-white border-gray-200 text-gray-700' : ' border border-transparent text-gray-900 shadow-sm')
+      return this.buttonClasses.concat(this.selected === 'monthly' ? ' bg-white border-gray-100 text-gray-900' : ' border-transparent text-gray-500')
     },
     yearlyClasses () {
-      return this.buttonClasses.concat(this.selected === 'yearly' ? ' bg-white border-gray-200 text-gray-700' : ' border border-transparent text-gray-900 shadow-sm')
+      return this.buttonClasses.concat(this.selected === 'yearly' ? ' bg-white border-gray-100 text-gray-900' : ' border-transparent text-gray-500')
     }
   }
 }

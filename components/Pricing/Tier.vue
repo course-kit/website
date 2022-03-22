@@ -1,6 +1,6 @@
 <template>
-  <div class="shadow-md ">
-    <div class="p-6 bg-yellow-200">
+  <div class="shadow-md bg-white divide-y divide-solid">
+    <div class="p-6">
       <h2
         class="relative text-gray-800 p-2 m-2 text-bold font-display text-lg text-center"
       >{{ tier.name }}</h2>

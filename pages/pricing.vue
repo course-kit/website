@@ -1,8 +1,12 @@
 <template>
   <div class="pt-12 lg:pt-16">
+    <div class="text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12">Pricing Plans</h1>
+      <p class="prose lg:prose-lg mx-auto">Start building for free, then upgrade once your course is live.</p>
+    </div>
     <Tiers />
     <div
-      class="container mx-auto px-6 sm:px-8 lg:px-12 relative bg-gray-50"
+      class="container mx-auto px-6 sm:px-8 lg:px-12 relative"
       id="join"
     >
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">

@@ -156,7 +156,7 @@ export default {
   computed: {
     signUp() {
       return {
-        title: 'Start 14-day trial',
+        title: 'Start free 14-day trial',
         path: this.$config.dashboardUrl,
         type: 'a',
         target: ''

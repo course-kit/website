@@ -4,7 +4,7 @@
     <Features />
     <Demo />
     <Benefits />
-    <Form />
+    <CTA />
   </div>
 </template>
 <script>
@@ -14,6 +14,7 @@ import Video from '../components/Home/Video'
 import Features from '../components/Home/Features'
 import Benefits from '../components/Home/Benefits'
 import Demo from '../components/Home/Demo'
+import CTA from '../components/CTA'
 
 const title = 'CourseKit | Headless Online Video Course Platform for Developers'
 const description =
@@ -22,7 +23,7 @@ const url = 'https://coursekit.dev/'
 const image = `${url}coursekit_meta.png`
 
 export default {
-  components: { Demo, Benefits, Features, Video, Form, Hero },
+  components: { Demo, Benefits, Features, Video, Form, Hero, CTA },
   head: {
     title,
     meta: [

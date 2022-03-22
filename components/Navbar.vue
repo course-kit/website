@@ -40,9 +40,10 @@
               :href="link.path"
               :target="link.target"
               :class="{
-                'border-blue-400 border-b-2': isRouteActive(link.path),
+                'border-blue-400': isRouteActive(link.path),
+                'border-white': !isRouteActive(link.path)
               }"
-              class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+              class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2"
             >
               {{ link.title }}
             </component>
@@ -53,15 +54,16 @@
         >
           <component
             :is="link.type"
-            v-for="link in rightLinks.filter(link => link.type !== 'button')"
+            v-for="link in rightLinks"
             :key="link.path"
             :to="link.path"
             :href="link.path"
             :target="link.target"
             :class="{
-                'border-blue-400 border-b-2': isRouteActive(link.path),
+                'border-blue-400': isRouteActive(link.path),
+                'border-white': !isRouteActive(link.path)
               }"
-            class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+            class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2"
           >
             {{ link.title }}
           </component>
@@ -69,22 +71,25 @@
         <div
           class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto  sm:space-x-8 sm:ml-6 sm:pr-0"
         >
-          <nuxt-link
-            v-for="link in rightLinks.filter(link => link.type === 'button')"
-            :key="link.path"
+          <a
+            :href="signUp.path"
+            :class="{
+              'border-blue-400 border-b-2': isRouteActive(signUp.path),
+            }"
             class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
-            :to="link.path"
-            >Join beta</nuxt-link
           >
+            {{ signUp.title }}
+          </a>
         </div>
       </div>
     </div>
 
     <div class="sm:hidden" v-if="$store.state.nav.open">
       <div class="pt-2 pb-4 space-y-1">
+
         <component
           :is="link.type"
-          v-for="link in leftLinks.concat(rightLinks)"
+          v-for="link in leftLinks.concat(rightLinks).concat([signUp])"
           :key="link.path"
           :to="link.path"
           :href="link.path"
@@ -122,23 +127,16 @@ export default {
       },
       {
         title: 'Features',
-        path: '/features',
+        path: '/features/',
         type: 'nuxt-link',
         target: '',
       },
       {
         title: 'Pricing',
-        path: '/pricing',
+        path: '/pricing/',
         type: 'nuxt-link',
         target: '',
       },
-
-      // {
-      //   title: 'Docs',
-      //   path: 'https://github.com/course-kit/client',
-      //   type: 'a',
-      //   target: '_blank'
-      // },
     ],
     rightLinks: [
       {
@@ -149,18 +147,22 @@ export default {
       },
       {
         title: 'Blog',
-        path: '/blog',
+        path: '/blog/',
         type: 'nuxt-link',
         target: '',
       },
-      {
-        title: 'Sign up',
-        path: '/#join',
-        type: 'button',
-        target: '',
-      },
-    ],
+    ]
   }),
+  computed: {
+    signUp() {
+      return {
+        title: 'Start 14-day trial',
+        path: this.$config.dashboardUrl,
+        type: 'a',
+        target: ''
+      }
+    },
+  },
   methods: {
     isRouteActive(link) {
       return this.$route.path === link

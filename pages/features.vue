@@ -4,17 +4,12 @@
       <h1 class="text-4xl font-bold font-display mb-8 leading-12">Features</h1>
     </div>
     <Item v-for="item in items" :item="item" :key="item.title" />
-    <Form />
+    <CTA />
   </div>
 </template>
 <script>
-import Hero from '../components/Home/Hero'
-import Form from '../components/Home/Form'
-import Video from '../components/Home/Video'
-import Features from '../components/Home/Features'
-import Benefits from '../components/Home/Benefits'
-import Demo from '../components/Home/Demo'
 import Item from '../components/Features/Item'
+import CTA from '../components/CTA'
 
 const title = 'CourseKit | Features'
 const description =
@@ -73,7 +68,7 @@ export default {
       items
     }
   },
-  components: { Item, Demo, Benefits, Features, Video, Form, Hero },
+  components: { Item, CTA },
   head: {
     title,
     meta: [

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-16 relative lg:flex lg:gap-16 justify-start mb-8 items-center" :class="{ 'flex-row-reverse' : !item.isLeft, 'bg-white' : item.isLeft }">
+  <div class="p-16 relative lg:flex lg:gap-16 justify-start mb-8 items-center" :class="{ 'flex-row-reverse' : !item.isLeft, 'bg-white' : !item.isLeft }">
     <div class="relative w-1/2">
       <h3 class="text-3xl font-bold font-display mb-6 leading-12">{{ item.title }}</h3>
       <div class="prose">

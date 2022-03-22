@@ -24,14 +24,13 @@ import Tier from "./Tier";
 
 const tiers = [
   {
-    name: 'Free',
-    href: '#join',
-    priceMonthly: 0,
-    priceYearly: 0,
+    name: 'Solo',
+    priceMonthly: 19,
+    priceYearly: 15,
     description: 'No credit card required.',
     includedFeatures: [
-      'Max 30 students.',
-      'Max 3 courses.'
+      'Unlimited students & courses',
+      'Max 1 school'
     ],
   },
   // {
@@ -45,14 +44,13 @@ const tiers = [
   //   ],
   // },
   {
-    name: 'Pro',
-    href: '#join',
-    priceMonthly: 39,
-    priceYearly: 29,
+    name: 'Agency',
+    priceMonthly: 49,
+    priceYearly: 39,
     description: 'All the basics for starting a new business',
     includedFeatures: [
-      'Unlimited students.',
-      'Unlimited courses.',
+      'Unlimited students & courses',
+      'Max 10 schools',
     ],
   },
   // {

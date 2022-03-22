@@ -38,6 +38,9 @@ module.exports = {
             },
             h4: {
               fontFamily: `${theme('fontFamily.display')}`
+            },
+            blockquote: {
+              quotes: 'none'
             }
           },
         },

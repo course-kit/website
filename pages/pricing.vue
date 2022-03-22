@@ -1,7 +1,24 @@
 <template>
   <div class="pt-12 lg:pt-16">
     <Tiers />
-    <Form />
+    <div
+      class="container mx-auto px-6 sm:px-8 lg:px-12 relative bg-gray-50"
+      id="join"
+    >
+      <div class="mx-auto sm:max-w-none lg:max-w-4xl">
+        <div class="relative overflow-hidden py-12 sm:py-24">
+          <div class="relative flex item-center flex-col">
+            <div class="text-center prose lg:prose-lg mx-auto">
+              <h2 class="mb-4">FAQ</h2>
+            </div>
+            <div class="prose lg:prose-lg mx-auto">
+              <p><strong>What is a school?</strong></p>
+              <p>A school is a collection of courses that can be added to a single website.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>

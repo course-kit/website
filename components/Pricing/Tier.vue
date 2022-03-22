@@ -9,10 +9,10 @@
         {{ ' ' }}
         <span class="text-base font-medium text-gray-500">/mo</span>
       </p>
-      <a :href="tier.href"
+      <a :href="$config.dashboardUrl"
 
          class="mt-8 relative block h-12 w-full rounded-md border text-center px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10"
-      >Get started</a>
+      >Start free 14-day trial</a>
     </div>
     <div class="pt-6 pb-8 px-6">
       <h3 class="text-sm font-medium text-gray-800 tracking-wide">What's included:</h3>

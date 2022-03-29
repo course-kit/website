@@ -1,14 +1,24 @@
 <template>
   <div class="pt-12 lg:pt-16">
     <div class="text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12">Pricing Plans</h1>
-      <p class="prose lg:prose-lg mx-auto">Start building for free, then upgrade once your course is live.</p>
+      <h1 class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12">
+        Pricing Plans
+      </h1>
+      <p class="prose lg:prose-lg mx-auto">
+        Start building for free, then upgrade once your course is live.
+      </p>
     </div>
     <Tiers />
-    <div
-      class="container mx-auto px-6 sm:px-8 lg:px-12 relative"
-      id="join"
-    >
+    <div class="text-center pt-8">
+      <p class="prose lg:prose-lg mx-auto">
+        Not sure?
+        <a href="https://calendly.com/anthonygore/15min" target="_blank"
+          >Schedule a live demo</a
+        >
+        and see if CourseKit is right for you.
+      </p>
+    </div>
+    <div class="container mx-auto px-6 sm:px-8 lg:px-12 relative" id="join">
       <div class="mx-auto sm:max-w-none lg:max-w-4xl">
         <div class="relative overflow-hidden py-12 sm:py-24">
           <div class="relative flex item-center flex-col">
@@ -16,8 +26,23 @@
               <h2 class="mb-4">FAQ</h2>
             </div>
             <div class="prose lg:prose-lg mx-auto">
-              <p><strong>What is a school?</strong></p>
-              <p>A school is a collection of courses that can be added to a single website.</p>
+              <p><strong class="text-xl">What is a school?</strong></p>
+              <p>
+                A school is a collection of courses that can be added to a
+                single website.
+              </p>
+              <p><strong class="text-xl">Can I see an example?</strong></p>
+              <p>
+                Sure, either
+                <a href="https://demo.coursekit.dev" target="_blank"
+                  >try the interactive tour</a
+                >
+                or
+                <a href="https://calendly.com/anthonygore/15min" target="_blank"
+                  >schedule a live demo</a
+                >
+                with a product expert.
+              </p>
             </div>
           </div>
         </div>

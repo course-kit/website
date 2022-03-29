@@ -41,7 +41,7 @@
               :target="link.target"
               :class="{
                 'border-blue-400': isRouteActive(link.path),
-                'border-white': !isRouteActive(link.path)
+                'border-white': !isRouteActive(link.path),
               }"
               class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2"
             >
@@ -49,9 +49,7 @@
             </component>
           </div>
         </div>
-        <div
-          class="hidden sm:ml-12 sm:flex sm:space-x-8"
-        >
+        <div class="hidden sm:ml-12 sm:flex sm:space-x-8">
           <component
             :is="link.type"
             v-for="link in rightLinks"
@@ -60,16 +58,16 @@
             :href="link.path"
             :target="link.target"
             :class="{
-                'border-blue-400': isRouteActive(link.path),
-                'border-white': !isRouteActive(link.path)
-              }"
+              'border-blue-400': isRouteActive(link.path),
+              'border-white': !isRouteActive(link.path),
+            }"
             class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2"
           >
             {{ link.title }}
           </component>
         </div>
         <div
-          class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto  sm:space-x-8 sm:ml-6 sm:pr-0"
+          class="hidden absolute inset-y-0 right-0 flex items-center pr-2 sm:flex sm:static sm:inset-auto sm:space-x-8 sm:ml-6 sm:pr-0"
         >
           <a
             :href="signUp.path"
@@ -86,7 +84,6 @@
 
     <div class="sm:hidden" v-if="$store.state.nav.open">
       <div class="pt-2 pb-4 space-y-1">
-
         <component
           :is="link.type"
           v-for="link in leftLinks.concat(rightLinks).concat([signUp])"
@@ -138,18 +135,24 @@ export default {
         target: '',
       },
       {
-        title: 'Demo',
+        title: 'Tour',
         path: 'https://demo.coursekit.dev',
         type: 'a',
         target: '_blank',
       },
+      {
+        title: 'Book a Demo',
+        path: 'https://calendly.com/anthonygore/15min',
+        type: 'a',
+        target: '_blank'
+      }
     ],
     rightLinks: [
       {
         title: 'Docs',
         path: 'https://github.com/course-kit/guides/blob/master/quick-start.md',
         type: 'a',
-        target: '_blank'
+        target: '_blank',
       },
       {
         title: 'Blog',
@@ -157,7 +160,7 @@ export default {
         type: 'nuxt-link',
         target: '',
       },
-    ]
+    ],
   }),
   computed: {
     signUp() {
@@ -165,7 +168,7 @@ export default {
         title: 'Start free 14-day trial',
         path: this.$config.dashboardUrl,
         type: 'a',
-        target: ''
+        target: '',
       }
     },
   },

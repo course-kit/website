@@ -4,21 +4,40 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="sm:flex sm:flex-col sm:align-center">
         <div class="relative self-center mt-6 rounded-lg p-0.5 flex sm:mt-8">
-          <button type="button" class="border shadow-sm" :class="monthlyClasses" @click="selected = 'monthly'">Monthly billing</button>
-          <button type="button" class="ml-0.5 border shadow-sm" :class="yearlyClasses" @click="selected = 'yearly'">Yearly billing</button>
+          <button
+            type="button"
+            class="border shadow-sm"
+            :class="monthlyClasses"
+            @click="selected = 'monthly'"
+          >
+            Monthly billing
+          </button>
+          <button
+            type="button"
+            class="ml-0.5 border shadow-sm"
+            :class="yearlyClasses"
+            @click="selected = 'yearly'"
+          >
+            Yearly billing
+          </button>
         </div>
       </div>
       <div
         class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:max-w-3xl mx-auto"
       >
-        <Tier v-for="tier in tiers" :key="tier.name" :tier="tier" :selected="selected" />
+        <Tier
+          v-for="tier in tiers"
+          :key="tier.name"
+          :tier="tier"
+          :selected="selected"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Tier from "./Tier";
+import Tier from './Tier'
 
 const tiers = [
   {
@@ -26,20 +45,14 @@ const tiers = [
     priceMonthly: 19,
     priceYearly: 15,
     description: 'No credit card required.',
-    includedFeatures: [
-      'Unlimited students & courses',
-      'Max 1 school'
-    ],
+    includedFeatures: ['Unlimited students & courses', 'Max 1 school'],
   },
   {
     name: 'Agency',
     priceMonthly: 99,
     priceYearly: 89,
     description: 'All the basics for starting a new business',
-    includedFeatures: [
-      'Unlimited students & courses',
-      'Max 10 schools',
-    ],
+    includedFeatures: ['Unlimited students & courses', 'Max 10 schools'],
   },
   // {
   //   name: 'Non-commerical',
@@ -60,17 +73,26 @@ export default {
   data() {
     return {
       selected: 'monthly',
-      buttonClasses: 'relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none sm:w-auto sm:px-8',
+      buttonClasses:
+        'relative w-1/2 rounded-md py-2 text-sm font-medium whitespace-nowrap focus:outline-none sm:w-auto sm:px-8',
       tiers,
     }
   },
   computed: {
-    monthlyClasses () {
-      return this.buttonClasses.concat(this.selected === 'monthly' ? ' bg-white border-gray-100 text-gray-900' : ' border-transparent text-gray-500')
+    monthlyClasses() {
+      return this.buttonClasses.concat(
+        this.selected === 'monthly'
+          ? ' bg-white border-gray-100 text-gray-900'
+          : ' border-transparent text-gray-500'
+      )
     },
-    yearlyClasses () {
-      return this.buttonClasses.concat(this.selected === 'yearly' ? ' bg-white border-gray-100 text-gray-900' : ' border-transparent text-gray-500')
-    }
-  }
+    yearlyClasses() {
+      return this.buttonClasses.concat(
+        this.selected === 'yearly'
+          ? ' bg-white border-gray-100 text-gray-900'
+          : ' border-transparent text-gray-500'
+      )
+    },
+  },
 }
 </script>

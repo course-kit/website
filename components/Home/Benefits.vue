@@ -49,7 +49,7 @@ export default {
       {
         title: 'Only the features you need',
         description:
-          'Unlike the bloated LMSs you\'re used to, CourseKit allows you to add features you need through integrations like video hosting, eCommerce, email, etc.',
+          "Unlike the bloated LMSs you're used to, CourseKit allows you to add features you need through integrations like video hosting, eCommerce, email, etc.",
       },
       {
         title: 'Admin tools out-of-the-box',

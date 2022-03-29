@@ -58,7 +58,7 @@ const items = [
     ],
     link: {
       text: 'See demo template',
-      url: 'https://demo.coursekit.dev'
+      url: 'https://github.com/course-kit/react-template'
     },
     img: '/features/react-template.png'
   },

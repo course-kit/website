@@ -21,8 +21,7 @@
           </client-only>
         </h1>
         <p class="prose lg:prose-lg">
-          CourseKit is a lightweight LMS with headless API allowing you to build
-          completely custom eLearning experiences with your favorite frontend stack.
+          CourseKit is a developer-first platform for publishing online courses. Build completely custom courses with your favorite frontend tools.
         </p>
         <div class="pt-8 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-4">
           <a :href="$config.dashboardUrl" class="flex-shrink-0 flex-grow-0 relative h-12 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10">Start free 14-day trial</a>

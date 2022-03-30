@@ -6,7 +6,7 @@
           <span>Build an online course with </span>
           <client-only>
             <vue-typer
-              :text="['React', 'Vue', 'Angular', 'Jamstack']"
+              :text="['React', 'Vue', 'JavaScript', 'Jamstack']"
               :repeat="Infinity"
               :shuffle="false"
               initial-action="erasing"

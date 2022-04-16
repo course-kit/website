@@ -96,7 +96,7 @@ export default {
         { property: 'og:type', content: 'website' },
         { name: 'robots', content: 'index,follow' },
         { name: 'twitter:card', content: 'summary_large_image' },
-      ]
+      ],
     }
     if (this.page.canonical) {
       head.link = [{ rel: 'canonical', href: this.page.canonical }]

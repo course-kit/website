@@ -144,8 +144,8 @@ export default {
         title: 'Book a Demo',
         path: 'https://calendly.com/anthonygore/15min',
         type: 'a',
-        target: '_blank'
-      }
+        target: '_blank',
+      },
     ],
     rightLinks: [
       {
@@ -165,7 +165,7 @@ export default {
   computed: {
     signUp() {
       return {
-        title: 'Start free 14-day trial',
+        title: 'Get started',
         path: this.$config.dashboardUrl,
         type: 'a',
         target: '',

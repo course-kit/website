@@ -39,20 +39,30 @@
 <script>
 import Tier from './Tier'
 
+const freeFeatures = [
+  'Unlimited students & courses',
+  '$1 + 10% transaction fee per student',
+]
+const proFeatures = [
+  'Unlimited students & courses',
+  'No transaction fees',
+  'Custom payment platform',
+]
+
 const tiers = [
   {
-    name: 'Solo',
-    priceMonthly: 19,
-    priceYearly: 15,
+    name: 'Free',
+    priceMonthly: 0,
+    priceYearly: 0,
     description: 'No credit card required.',
-    includedFeatures: ['Unlimited students & courses', 'Max 1 school'],
+    includedFeatures: freeFeatures,
   },
   {
-    name: 'Agency',
-    priceMonthly: 99,
-    priceYearly: 89,
+    name: 'Pro',
+    priceMonthly: 49,
+    priceYearly: 39,
     description: 'All the basics for starting a new business',
-    includedFeatures: ['Unlimited students & courses', 'Max 10 schools'],
+    includedFeatures: proFeatures,
   },
   // {
   //   name: 'Non-commerical',

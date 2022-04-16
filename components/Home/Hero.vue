@@ -30,7 +30,7 @@
           <a
             :href="$config.dashboardUrl"
             class="flex-shrink-0 flex-grow-0 relative h-12 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10"
-            >Start free 14-day trial</a
+            >Get started</a
           >
           <a
             href="https://demo.coursekit.dev"

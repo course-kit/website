@@ -26,11 +26,6 @@
               <h2 class="mb-4">FAQ</h2>
             </div>
             <div class="prose lg:prose-lg mx-auto">
-              <p><strong class="text-xl">What is a school?</strong></p>
-              <p>
-                A school is a collection of courses that can be added to a
-                single website.
-              </p>
               <p><strong class="text-xl">Can I see an example?</strong></p>
               <p>
                 Sure, either

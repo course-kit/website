@@ -2,28 +2,8 @@
 <template>
   <div class="">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:flex-col sm:align-center">
-        <div class="relative self-center mt-6 rounded-lg p-0.5 flex sm:mt-8">
-          <button
-            type="button"
-            class="border shadow-sm"
-            :class="monthlyClasses"
-            @click="selected = 'monthly'"
-          >
-            Monthly billing
-          </button>
-          <button
-            type="button"
-            class="ml-0.5 border shadow-sm"
-            :class="yearlyClasses"
-            @click="selected = 'yearly'"
-          >
-            Yearly billing
-          </button>
-        </div>
-      </div>
       <div
-        class="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:max-w-3xl mx-auto"
+        class="mt-4 space-y-4 sm:mt-8 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:max-w-3xl mx-auto"
       >
         <Tier
           v-for="tier in tiers"

@@ -150,7 +150,7 @@ export default {
     rightLinks: [
       {
         title: 'Docs',
-        path: 'https://github.com/course-kit/guides/blob/master/quick-start.md',
+        path: 'https://docs.coursekit.dev/',
         type: 'a',
         target: '_blank',
       },

@@ -3,6 +3,8 @@
     <Hero />
     <Platforms />
     <Features />
+    <Testimonial />
+    <Why />
     <Form />
   </div>
 </template>
@@ -14,6 +16,8 @@ import Features from '../components/Home/Features.vue'
 import Benefits from '../components/Home/Benefits'
 import Demo from '../components/Home/Demo'
 import CTA from '../components/CTA'
+import Why from '../components/Home/Why.vue'
+import Testimonial from "../components/Home/Testimonial.vue";
 
 const title = 'CourseKit | Headless Online Video Course Platform for Developers'
 const description =
@@ -22,7 +26,7 @@ const url = 'https://coursekit.dev/'
 const image = `${url}coursekit_meta.png`
 
 export default {
-  components: { Demo, Benefits, Form, Hero, CTA, Platforms, Features },
+  components: {Testimonial, Demo, Benefits, Form, Hero, CTA, Platforms, Features, Why },
   head: {
     title,
     meta: [

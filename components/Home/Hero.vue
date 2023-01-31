@@ -6,7 +6,7 @@
           <span>Add an online course to </span>
           <client-only>
             <vue-typer
-              :text="['Shopify', 'WordPress', 'Leadpages', 'Webflow', 'Clickfunnels']"
+              :text="['Shopify', 'WordPress', 'Webflow', 'Clickfunnels', 'Squarespace', 'Leadpages', 'WooCommerce', 'Wix']"
               :repeat="Infinity"
               :shuffle="false"
               initial-action="erasing"

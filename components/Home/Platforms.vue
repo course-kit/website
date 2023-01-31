@@ -6,8 +6,8 @@
     <div class="relative overflow-hidden py-12 sm:py-24">
       <div class="text-center prose lg:prose-lg mx-auto">
         <h3 class="mx-auto max-w-xl">Publish your course on any web page or website builder including...</h3>
-        <div class="flex justify-between pt-8 pb-8">
-          <div class="flex text-left flex-col gap-1" v-for="col in cols" :key="col.id">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8">
+          <div class="flex flex-col text-left gap-1" v-for="col in cols" :key="col.id">
             <div class="flex gap-2 items-center" v-for="item in col.items" :key="item">
               <CheckSolid class="text-green-600 h-6 w-6" />
               <span>{{  item  }}</span>

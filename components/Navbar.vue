@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <nav class="bg-white border-b-2 fixed w-full z-10">
+  <nav class="bg-white border-b-2 fixed w-full z-20">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -115,45 +115,8 @@ export default {
   },
   data: () => ({
     open: false,
-    leftLinks: [
-      {
-        title: 'Home',
-        path: '/',
-        type: 'nuxt-link',
-        target: '',
-      },
-      {
-        title: 'Features',
-        path: '/features/',
-        type: 'nuxt-link',
-        target: '',
-      },
-      {
-        title: 'Pricing',
-        path: '/pricing/',
-        type: 'nuxt-link',
-        target: '',
-      },
-      {
-        title: 'Tour',
-        path: 'https://demo.coursekit.dev',
-        type: 'a',
-        target: '_blank',
-      },
-      {
-        title: 'Book a Demo',
-        path: 'https://calendly.com/anthonygore/15min',
-        type: 'a',
-        target: '_blank',
-      },
-    ],
+    leftLinks: [],
     rightLinks: [
-      {
-        title: 'Docs',
-        path: 'https://docs.coursekit.dev/',
-        type: 'a',
-        target: '_blank',
-      },
       {
         title: 'Blog',
         path: '/blog/',
@@ -165,7 +128,7 @@ export default {
   computed: {
     signUp() {
       return {
-        title: 'Get started',
+        title: 'Get access',
         path: this.$config.dashboardUrl,
         type: 'a',
         target: '',

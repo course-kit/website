@@ -1,17 +1,16 @@
 <template>
   <div class="pt-12 lg:pt-16">
     <Hero />
+    <Platforms />
     <Features />
-    <Demo />
-    <Benefits />
-    <CTA />
+    <Form />
   </div>
 </template>
 <script>
 import Hero from '../components/Home/Hero'
 import Form from '../components/Home/Form'
-import Video from '../components/Home/Video'
-import Features from '../components/Home/Features'
+import Platforms from '../components/Home/Platforms.vue'
+import Features from '../components/Home/Features.vue'
 import Benefits from '../components/Home/Benefits'
 import Demo from '../components/Home/Demo'
 import CTA from '../components/CTA'
@@ -23,7 +22,7 @@ const url = 'https://coursekit.dev/'
 const image = `${url}coursekit_meta.png`
 
 export default {
-  components: { Demo, Benefits, Features, Video, Form, Hero, CTA },
+  components: { Demo, Benefits, Form, Hero, CTA, Platforms, Features },
   head: {
     title,
     meta: [

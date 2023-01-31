@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-gray-50">
+  <div class="relative bg-gray-100">
     <Navbar />
     <main class="mx-auto max-w-7xl pt-16">
       <Nuxt />

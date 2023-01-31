@@ -40,7 +40,7 @@
         </a>
       </div>
       <p class="mt-8 text-center text-gray-400 prose mx-auto">
-        &copy; 2022 Course Kit Pty. Ltd. All rights reserved.
+        &copy; 2023 Course Kit Pty. Ltd. All rights reserved.
       </p>
     </div>
   </footer>

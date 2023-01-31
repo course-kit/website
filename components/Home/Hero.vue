@@ -37,14 +37,14 @@
         class="relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
       >
         <div class="relative mx-auto w-full lg:max-w-md pt-4">
-          <div :class="{ 'scale-110': scaleState === 1, 'scale-95': scaleState !== 1 }" class="bg-pink-500 duration-1000 transition-all ease-in left-14 top-3 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700">
+          <div :class="{ 'scale-110': scaleState === 1, 'scale-95': scaleState !== 1 }" class="bg-rose-400 duration-500 transition-all ease-in left-14 top-3 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700">
             Your website
             <div class="tooltip-arrow tooltip-arrow-top"></div>
           </div>
           <div class="p-2">
             <img class="w-full" src="/coursekit_homepage.png" alt="CourseKit" />
           </div>
-          <div :class="{ 'scale-110': scaleState === 4, 'scale-95': scaleState !== 4 }" class="bg-pink-500 duration-1000 transition-all ease-in -bottom-1 right-14 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700">
+          <div :class="{ 'scale-110': scaleState === 7, 'scale-95': scaleState !== 7 }" class="bg-rose-400 duration-500 transition-all ease-in -bottom-1 right-14 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700">
             Your course
             <div class="tooltip-arrow tooltip-arrow-bottom"></div>
           </div>
@@ -63,10 +63,10 @@ export default {
   mounted() {
     setInterval(() => {
       this.scaleState++;
-      if (this.scaleState >= 6) {
+      if (this.scaleState >= 12) {
         this.scaleState = 0;
       }
-    }, 1000)
+    }, 500)
   }
 }
 </script>

@@ -74,7 +74,7 @@
             :class="{
               'border-blue-400 border-b-2': isRouteActive(signUp.path),
             }"
-            class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md"
+            class="bg-blue-400 text-white text-sm font-bold px-4 py-2 rounded-md hover:bg-blue-500 hover:border-blue-500"
           >
             {{ signUp.title }}
           </a>
@@ -129,7 +129,7 @@ export default {
     signUp() {
       return {
         title: 'Get access',
-        path: this.$config.dashboardUrl,
+        path: "/#join",
         type: 'a',
         target: '',
       }

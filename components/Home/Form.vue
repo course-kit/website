@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto px-6 sm:px-8 lg:px-12 relative bg-gray-50"
+    class="container mx-auto px-6 sm:px-8 lg:px-12 relative"
     id="join"
   >
     <div class="mx-auto sm:max-w-none lg:max-w-4xl">
@@ -8,14 +8,14 @@
         <div class="relative flex item-center flex-col">
           <div class="text-center prose lg:prose-lg mx-auto">
             <h2 class="">Join as an early user</h2>
-            <p class="">
+            <p class="max-w-xl">
               CourseKit is currently an invite-only beta. If you'd like to
               request an invite or get notified when we launch, enter your email
               below.
             </p>
           </div>
           <form
-            class="mt-12 sm:mx-auto sm:max-w-2xl sm:flex w-full"
+            class="mt-12 sm:mx-auto sm:max-w-2xl flex flex-col gap-4 w-80"
             @submit.prevent="submit"
           >
             <div class="min-w-0 flex-1">
@@ -29,7 +29,7 @@
                 placeholder="First name"
               />
             </div>
-            <div class="mt-4 min-w-0 flex-1 sm:mt-0 sm:ml-3">
+            <div class="min-w-0 flex-1">
               <label class="sr-only" for="cta-email">Email address</label>
               <input
                 v-model="email"
@@ -40,9 +40,9 @@
                 placeholder="Email"
               />
             </div>
-            <div class="mt-4 sm:mt-0 sm:ml-3">
+            <div class="min-w-0 flex-1">
               <button
-                class="relative block h-12 w-full sm:w-40 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10"
+                class="relative block h-12 w-full rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500"
                 type="submit"
                 :class="{ 'button-loading': loading }"
               >

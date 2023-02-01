@@ -18,6 +18,10 @@ export default {
     ]
   },
 
+  proxy: process.env.NODE_ENV === 'development' ? {
+    '/.netlify/functions/join-beta': 'http://localhost:8888/.netlify/functions/join-beta'
+  } : {},
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -49,6 +53,7 @@ export default {
       }
     ],
     '@nuxtjs/gtm',
+    '@nuxtjs/proxy'
   ],
 
   publicRuntimeConfig: {

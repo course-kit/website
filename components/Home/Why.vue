@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="relative bg-white"
-  >
+  <div class="mx-auto px-6 sm:px-8 lg:px-12 relative bg-white">
     <div class="mx-auto sm:max-w-none lg:max-w-4xl container mx-auto">
       <div class="relative overflow-hidden py-12 sm:py-24">
         <div class="relative flex item-center flex-col">
@@ -9,7 +7,14 @@
             <h2 class="">Why CourseKit?</h2>
           </div>
           <div class="grid grid-cols-2 gap-6 mx-auto">
-            <Card class=" h-44" v-for="feature in features" :key="feature.title" :title="feature.title" :description="feature.description" />
+            <Card
+              class="h-48 shadow-md"
+              v-for="feature in features"
+              :key="feature.title"
+              :title="feature.title"
+              :description="feature.description"
+              highlight="red"
+            />
           </div>
         </div>
       </div>
@@ -17,21 +22,35 @@
   </div>
 </template>
 <script>
-import Card from "./Card.vue"
+import Card from './Card.vue'
 export default {
   components: { Card },
   data() {
     return {
       features: [
-        { title: 'Start selling courses sooner', description: 'No need to design a separate course site. Upload and sell your course today.' },
-        { title: 'Keep your users on your site', description: 'Create a consistent and convenient experience for users by publishing on your own site.' },
-        { title: 'Minimal & simple', description: 'CourseKit does one thing: host courses! No tools you already have or features you don\'t need.' },
-        { title: 'Use your favorite tools', description: 'CourseKit integrates with the site builder, marketing automations, etc you already pay for.' },
-      ]
+        {
+          title: 'Start selling sooner',
+          description:
+            'Connect CourseKit to your site in minutes. No need to build a separate course site.',
+        },
+        {
+          title: 'Better user experience',
+          description:
+            'Keep users on your site for a consistent and convenient experience.',
+        },
+        {
+          title: 'Use your current tools',
+          description:
+            'CourseKit integrates with the site, cart, and marketing tools you already use.',
+        },
+        {
+          title: 'Simple & easy',
+          description:
+            'CourseKit makes creating and selling courses quick and easy like it should be!',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
-<style>
-
-</style>
+<style></style>

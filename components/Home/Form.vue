@@ -1,17 +1,13 @@
 <template>
-  <div
-    class="container mx-auto px-6 sm:px-8 lg:px-12 relative"
-    id="join"
-  >
+  <div class="container mx-auto px-6 sm:px-8 lg:px-12 relative" id="join">
     <div class="mx-auto sm:max-w-none lg:max-w-4xl">
       <div class="relative overflow-hidden py-12 sm:py-24">
         <div class="relative flex item-center flex-col">
           <div class="text-center prose lg:prose-lg mx-auto">
-            <h2 class="">Join as an early user</h2>
+            <h2 class="">Get early access</h2>
             <p class="max-w-xl">
-              CourseKit is currently an invite-only beta. If you'd like to
-              request an invite or get notified when we launch, enter your email
-              below.
+              CourseKit is currently an invite-only beta. To request an invite
+              or get notified when we publicly launch, enter your details below.
             </p>
           </div>
           <form
@@ -110,19 +106,22 @@ export default {
           this.loading = false
         } else {
           const token = await this.$recaptcha.execute('login')
-          const { data, status } = await fetch(this.$config.formUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Accept: 'application/json',
-              credentials: 'include',
-            },
-            body: JSON.stringify({
-              name: this.name,
-              email: this.email,
-              captchaToken: token,
-            }),
-          })
+          const { data, status } = await fetch(
+            '/.netlify/functions/join-beta',
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+                credentials: 'include',
+              },
+              body: JSON.stringify({
+                name: this.name,
+                email: this.email,
+                captchaToken: token,
+              }),
+            }
+          )
           this.loading = false
           if (status === 200) {
             this.$gtm.push({ event: 'join_beta' })
@@ -135,8 +134,8 @@ export default {
               text: 'Submission error!',
               classes: 'bg-red-200 text-red-900',
             }
-            console.log(data)
           }
+          console.log(data)
         }
       } catch (error) {
         this.message = {

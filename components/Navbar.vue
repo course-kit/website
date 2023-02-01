@@ -129,7 +129,7 @@ export default {
     signUp() {
       return {
         title: 'Get access',
-        path: "/#join",
+        path: '/#join',
         type: 'a',
         target: '',
       }

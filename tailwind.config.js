@@ -8,6 +8,7 @@ module.exports = {
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
   ],
+  safelist: ['border-blue-400', 'border-red-400'],
   theme: {
     fontFamily: {
       display: ['Readex Pro', 'sans-serif'],

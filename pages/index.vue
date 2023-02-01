@@ -3,7 +3,6 @@
     <Hero />
     <Platforms />
     <Features />
-    <Testimonial />
     <Why />
     <Form />
   </div>

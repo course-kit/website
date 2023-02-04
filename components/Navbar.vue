@@ -119,12 +119,12 @@ export default {
     open: false,
     leftLinks: [],
     rightLinks: [
-      {
-        title: 'Blog',
-        path: '/blog/',
-        type: 'nuxt-link',
-        target: '',
-      },
+      // {
+      //   title: 'Guides',
+      //   path: '/guides/',
+      //   type: 'nuxt-link',
+      //   target: '',
+      // },
     ],
   }),
   computed: {

@@ -15,6 +15,14 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/icon.png' }
+    ],
+    script: [
+      {
+        hid: 'tawk.to',
+        src:
+          'https://embed.tawk.to/63d86c294742512879108a9d/1go2md0mp',
+        defer: true
+      }
     ]
   },
 

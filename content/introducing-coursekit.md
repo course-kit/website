@@ -3,6 +3,7 @@ title: Introducing CourseKit
 description: 'Learn about our headless platform for creating online courses which is now in beta.'
 image: '/blog/coursekit_intro.png'
 date: 2022-02-16
+tags: blog
 ---
 When it comes to hosting online courses, developers have had to make a tough choice: either go with an all-in-one solution like Teachable or Thinkific and be stuck with dull design, an unimaginative lesson interface, and severe feature bloat. Or, spend 6 months building a custom platform from scratch.
 

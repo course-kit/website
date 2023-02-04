@@ -3,6 +3,7 @@ title: Build an Online Course with React
 description: 'Learn to build a video course single-page app with React.'
 image: '/blog/online-course-react.png'
 date: 2022-03-04
+tags: blog
 ---
 
 A great way to share your knowledge is with an online course. Rather than being stuck with the boring and inflexible lesson pages offered by the well-known course platforms, we can build our own so we can make the design and UX exactly how we like.

@@ -1,4 +1,5 @@
 const SENDY_URL = 'https://mail.coursekit.dev'
+const fetch = require('node-fetch')
 
 function buildFormBody(details) {
   var formBody = [];

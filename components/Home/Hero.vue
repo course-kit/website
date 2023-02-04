@@ -13,7 +13,7 @@
             <span class="inline-flex">Add an online course to </span>
             <client-only>
               <vue-typer
-                class="w-72 sm:w-96 block mx-auto md:mx-0"
+                class="w-80 sm:w-96 block mx-auto md:mx-0"
                 :text="[
                   'Shopify',
                   'WordPress',

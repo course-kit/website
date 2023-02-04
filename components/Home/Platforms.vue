@@ -40,7 +40,7 @@ export default {
         { id: 1, items: ['Shopify', 'WordPress', 'Webflow'] },
         { id: 2, items: ['Clickfunnels', 'Squarespace', 'HTML'] },
         { id: 3, items: ['Leadpages', 'WooCommerce', 'Wix'] },
-        { id: 4, items: ['Leadpages', 'WooCommerce', 'Wix'] },
+        { id: 4, items: ['Carrd', 'Jamstack', 'Instapage'] },
       ],
     }
   },

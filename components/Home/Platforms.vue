@@ -1,14 +1,14 @@
 <template>
-  <div class="relative bg-white">
+  <div class="relative">
     <div class="container mx-auto px-6 sm:px-8 lg:px-12 relative">
       <div class="relative overflow-hidden py-12 sm:py-24">
-        <div class="text-center prose lg:prose-lg mx-auto">
+        <div class="text-center prose lg:prose-lg mx-auto max-w-4xl">
           <h3 class="mx-auto max-w-xl">
             Publish your course on any web page or website builder including...
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-8 pb-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 pt-8 pb-8">
             <div
-              class="flex flex-col text-left gap-1"
+              class="flex flex-col text-left gap-1 mb-1"
               v-for="col in cols"
               :key="col.id"
             >
@@ -40,6 +40,7 @@ export default {
         { id: 1, items: ['Shopify', 'WordPress', 'Webflow'] },
         { id: 2, items: ['Clickfunnels', 'Squarespace', 'HTML'] },
         { id: 3, items: ['Leadpages', 'WooCommerce', 'Wix'] },
+        { id: 4, items: ['Leadpages', 'WooCommerce', 'Wix'] },
       ],
     }
   },

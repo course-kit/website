@@ -1,9 +1,10 @@
 <template>
   <div class="pt-12 lg:pt-16">
     <Hero />
-    <Platforms />
-    <Features />
     <Why />
+    <Platforms />
+<!--    <Testimonial />-->
+    <Features />
     <Form />
   </div>
 </template>

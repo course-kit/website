@@ -1,7 +1,7 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
   <nav class="bg-white border-b-2 fixed w-full z-20">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
           <span
@@ -19,16 +19,18 @@
         </div>
         <div class="flex-1 flex items-center sm:items-stretch justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <img
-              class="hidden sm:block lg:hidden h-6 w-auto"
-              src="/icon_2x.png"
-              alt="CourseKit"
-            />
-            <img
-              class="block sm:hidden lg:block h-5 w-auto"
-              src="/logo.png"
-              alt="CourseKit"
-            />
+            <a href="/">
+              <img
+                class="block md:hidden h-6 w-auto"
+                src="/icon_2x.png"
+                alt="CourseKit"
+              />
+              <img
+                class="hidden md:block h-5 w-auto"
+                src="/logo.png"
+                alt="CourseKit"
+              />
+            </a>
           </div>
           <div class="hidden sm:ml-12 sm:flex sm:space-x-8">
             <!-- Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->

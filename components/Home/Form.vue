@@ -11,7 +11,7 @@
             </p>
           </div>
           <form
-            class="mt-12 sm:mx-auto sm:max-w-2xl flex flex-col gap-4 w-80"
+            class="mt-12 sm:mx-auto sm:max-w-2xl flex flex-col gap-4 w-80 mx-auto"
             @submit.prevent="submit"
           >
             <div class="min-w-0 flex-1">

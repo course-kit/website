@@ -6,7 +6,7 @@
           <div class="text-center prose lg:prose-lg mx-auto pb-8">
             <h2 class="">Why CourseKit?</h2>
           </div>
-          <div class="grid grid-cols-2 gap-6 mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto">
             <Card
               class="h-48 shadow-md"
               v-for="feature in features"
@@ -29,17 +29,17 @@ export default {
     return {
       features: [
         {
-          title: 'Start selling sooner',
+          title: 'Start selling now',
           description:
             'Connect CourseKit to your site in minutes. No need to build a separate course site.',
         },
         {
-          title: 'Better user experience',
+          title: 'Delight your users',
           description:
             'Keep users on your site for a consistent and convenient experience.',
         },
         {
-          title: 'Use your current tools',
+          title: 'Use your existing tools',
           description:
             'CourseKit integrates with the site, cart, and marketing tools you already use.',
         },

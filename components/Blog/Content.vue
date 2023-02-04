@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mx-auto bg-white px-6 sm:px-8 lg:px-16 pt-12 pt-16 lg:pt-24  pb-24"
+    class="container mx-auto bg-white px-6 sm:px-8 lg:px-16 pt-12 pt-16 lg:pt-24 pb-24"
   >
     <NavBack />
     <article class="mt-8 flex-col flex lg:flex-row lg:space-x-12 xl:space-x-16">
@@ -36,9 +36,9 @@ import CTA from '../../components/Blog/CTA'
 import NavBack from '../../components/Blog/NavBack'
 import AuthorInfo from '../../components/Blog/AuthorInfo'
 export default {
-  components: {AuthorInfo, NavBack, CTA, TOC },
+  components: { AuthorInfo, NavBack, CTA, TOC },
   props: {
-    page: Object
+    page: Object,
   },
   computed: {
     title() {

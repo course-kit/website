@@ -1,25 +1,29 @@
 <template>
   <div class="relative">
-    <div class="container mx-auto px-6 sm:px-8 lg:px-12 pt-16 pb-12 sm:pt-24 sm:pb-24">
+    <div
+      class="container mx-auto px-6 sm:px-8 lg:px-12 pt-16 pb-12 sm:pt-24 sm:pb-24"
+    >
       <div
         class="max-w-6xl mx-auto flex gap-12 items-center justify-center flex-col md:flex-row"
       >
         <div class="max-w-xl text-center md:text-left">
-          <h1 class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12 center">
+          <h1
+            class="text-4xl sm:text-5xl font-bold font-display mb-6 leading-12 center"
+          >
             <span class="inline-flex">Add an online course to </span>
             <client-only>
               <vue-typer
                 class="w-72 sm:w-96 block mx-auto md:mx-0"
                 :text="[
-                'Shopify',
-                'WordPress',
-                'Webflow',
-                'Clickfunnels',
-                'Squarespace',
-                'Leadpages',
-                'WooCommerce',
-                'Wix',
-              ]"
+                  'Shopify',
+                  'WordPress',
+                  'Webflow',
+                  'Clickfunnels',
+                  'Squarespace',
+                  'Leadpages',
+                  'WooCommerce',
+                  'Wix',
+                ]"
                 :repeat="Infinity"
                 :shuffle="false"
                 initial-action="erasing"
@@ -34,7 +38,8 @@
             </client-only>
           </h1>
           <p class="prose lg:prose-lg">
-            CourseKit is an online course builder that lets you publish courses to
+            CourseKit is an online course builder that lets you publish courses
+            to
             <em>any website or eCommerce store.</em>
           </p>
           <div
@@ -43,7 +48,7 @@
             <a
               href="/#join"
               class="flex-shrink-0 flex-grow-0 relative h-12 rounded-md border px-5 py-3 bg-blue-400 text-base font-medium text-white border-blue-400 hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500 sm:px-10"
-            >Get access</a
+              >Get access</a
             >
           </div>
         </div>
@@ -53,22 +58,26 @@
           <div class="relative mx-auto w-full lg:max-w-md pt-4">
             <div
               :class="{
-              'scale-110': scaleState === 1,
-              'scale-95': scaleState !== 1,
-            }"
+                'scale-110': scaleState === 1,
+                'scale-95': scaleState !== 1,
+              }"
               class="bg-rose-400 duration-500 transition-all ease-in left-14 top-3 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700"
             >
               Your website
               <div class="tooltip-arrow tooltip-arrow-top"></div>
             </div>
             <div class="p-2">
-              <img class="w-full" src="/coursekit_homepage.png" alt="CourseKit" />
+              <img
+                class="w-full"
+                src="/coursekit_homepage.png"
+                alt="CourseKit"
+              />
             </div>
             <div
               :class="{
-              'scale-110': scaleState === 7,
-              'scale-95': scaleState !== 7,
-            }"
+                'scale-110': scaleState === 7,
+                'scale-95': scaleState !== 7,
+              }"
               class="bg-rose-400 duration-500 transition-all ease-in -bottom-1 right-14 absolute z-10 inline-block px-4 py-3 text-sm font-medium text-white rounded-lg shadow-sm tooltip dark:bg-gray-700"
             >
               Your course

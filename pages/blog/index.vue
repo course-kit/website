@@ -22,7 +22,7 @@ export default {
   async asyncData({ $content }) {
     const posts = await $content()
       .only(['title', 'image', 'tags', 'slug', 'description', 'date'])
-      .where({ 'tags': { $contains: 'blog' } })
+      .where({ tags: { $contains: 'blog' } })
       .sortBy('date', 'desc')
       .fetch()
     return {

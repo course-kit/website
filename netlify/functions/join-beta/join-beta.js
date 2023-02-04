@@ -1,5 +1,5 @@
 const SENDY_URL = 'https://mail.coursekit.dev'
-const fetch = require('node-fetch')
+const axios = require("axios");
 
 function buildFormBody(details) {
   var formBody = [];
@@ -17,7 +17,7 @@ async function verifyToken (token) {
     secret: process.env.RECAPTCHA_SECRET_KEY,
     response: token
   };
-  const response = await fetch(url, {
+  const response = await axios(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',

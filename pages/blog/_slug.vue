@@ -1,8 +1,8 @@
 <template>
-  <Content :page="page"/>
+  <Content :page="page" />
 </template>
 <script>
-import Content from "../../components/Blog/Content.vue";
+import Content from '../../components/Blog/Content.vue'
 export default {
   components: {
     Content,
@@ -15,4 +15,3 @@ export default {
   },
 }
 </script>
-
